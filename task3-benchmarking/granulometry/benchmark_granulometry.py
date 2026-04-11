@@ -4,9 +4,16 @@ Task 3: Benchmark Qwen2.5-VL-3B (base model) on granulometry test set.
 Asks the model to classify each image by max particle size and grading.
 Compares model output against ground truth and reports accuracy.
 
+Supports two modes:
+  zero-shot: No reference image, model guesses grading from visual appearance alone.
+  few-shot:  Reference image (examples_classification_data.png) included in prompt
+             so the model can learn the A=coarse, B=medium, C=fine convention.
+
 Usage:
-    python benchmark_granulometry.py [--test-dir ../../datasets/granulometry/test]
-    python benchmark_granulometry.py --limit 10  # quick test with 10 images
+    python benchmark_granulometry.py                          # zero-shot, all images
+    python benchmark_granulometry.py --mode few-shot          # few-shot with reference
+    python benchmark_granulometry.py --limit 10               # quick test
+    python benchmark_granulometry.py --mode few-shot --limit 5
 """
 import os
 import sys
@@ -20,16 +27,28 @@ from collections import defaultdict
 # --- Config ---
 TEST_DIR = os.environ.get("TEST_DIR", "../../datasets/granulometry/test")
 MANIFEST = os.environ.get("MANIFEST", "../../datasets/granulometry/test_manifest.json")
+REF_IMAGE_PATH = os.path.join(os.path.dirname(__file__), "examples_classification_data.png")
 IMG_SIZE = 500
-RESULTS_FILE = "benchmark_results.json"
 
-PROMPT = f"""This image shows concrete aggregate particles photographed from above.
+PROMPT_ZERO_SHOT = """This image shows concrete aggregate particles photographed from above.
 The image resolution is 8 pixels per mm.
 
 Analyze the particles and respond with ONLY a JSON object (no other text):
-{{"max_particle_size_mm": <estimated maximum particle size as integer: 8, 16, or 32>, "grading": "<coarse, medium, or fine>"}}
+{"max_particle_size_mm": <estimated maximum particle size as integer: 8, 16, or 32>, "grading": "<coarse, medium, or fine>"}
 
 The values 8, 16, 32 for max_particle_size_mm and coarse, medium, fine for grading are for reference. Use the actual values based on what you observe."""
+
+PROMPT_FEW_SHOT_REF = """The first image is a reference chart showing examples of concrete aggregate classification.
+It shows 9 classes across two dimensions:
+- Columns: max particle size (8mm, 16mm, 32mm)
+- Rows: grading (A = coarse, B = medium, C = fine)
+
+Use this reference to classify the second image."""
+
+PROMPT_FEW_SHOT_QUERY = """Now analyze this image of concrete aggregate particles (8 pixels per mm resolution).
+
+Based on the reference chart, respond with ONLY a JSON object (no other text):
+{"max_particle_size_mm": <8, 16, or 32>, "grading": "<coarse, medium, or fine>"}"""
 
 
 def parse_response(raw):
@@ -75,13 +94,24 @@ def load_model():
     return model, processor
 
 
-def infer(model, processor, image):
-    msgs = [{"role": "user", "content": [
-        {"type": "image", "image": image},
-        {"type": "text", "text": PROMPT},
-    ]}]
+def infer(model, processor, image, mode="zero-shot", ref_image=None):
+    if mode == "few-shot" and ref_image is not None:
+        msgs = [{"role": "user", "content": [
+            {"type": "image", "image": ref_image},
+            {"type": "text", "text": PROMPT_FEW_SHOT_REF},
+            {"type": "image", "image": image},
+            {"type": "text", "text": PROMPT_FEW_SHOT_QUERY},
+        ]}]
+        images = [ref_image, image]
+    else:
+        msgs = [{"role": "user", "content": [
+            {"type": "image", "image": image},
+            {"type": "text", "text": PROMPT_ZERO_SHOT},
+        ]}]
+        images = [image]
+
     text = processor.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
-    inputs = processor(text=[text], images=[image], return_tensors="pt", padding=True).to(model.device)
+    inputs = processor(text=[text], images=images, return_tensors="pt", padding=True).to(model.device)
     t = time.time()
     ids = model.generate(**inputs, max_new_tokens=128, temperature=0.1, do_sample=True)
     elapsed = time.time() - t
@@ -92,6 +122,7 @@ def infer(model, processor, image):
 def main():
     # Parse args
     limit = None
+    mode = "zero-shot"
     for i, arg in enumerate(sys.argv[1:]):
         if arg == "--test-dir" and i + 1 < len(sys.argv) - 1:
             global TEST_DIR, MANIFEST
@@ -99,6 +130,25 @@ def main():
             MANIFEST = os.path.join(TEST_DIR, "..", "test_manifest.json")
         if arg == "--limit" and i + 1 < len(sys.argv) - 1:
             limit = int(sys.argv[i + 2])
+        if arg == "--mode" and i + 1 < len(sys.argv) - 1:
+            mode = sys.argv[i + 2]
+            if mode not in ("zero-shot", "few-shot"):
+                print(f"Error: --mode must be 'zero-shot' or 'few-shot', got '{mode}'")
+                sys.exit(1)
+
+    results_file = f"benchmark_results_{mode}.json"
+
+    # Load reference image for few-shot
+    ref_image = None
+    if mode == "few-shot":
+        if not os.path.exists(REF_IMAGE_PATH):
+            print(f"Error: Reference image not found at {REF_IMAGE_PATH}")
+            print("Few-shot mode requires examples_classification_data.png in the script directory.")
+            sys.exit(1)
+        ref_image = Image.open(REF_IMAGE_PATH).convert("RGB")
+        print(f"Mode: few-shot (reference: {REF_IMAGE_PATH})")
+    else:
+        print(f"Mode: zero-shot (no reference image)")
 
     # Load manifest
     with open(MANIFEST) as f:
@@ -106,8 +156,7 @@ def main():
     if limit:
         manifest = manifest[:limit]
 
-    print(f"Test set: {len(manifest)} images from {TEST_DIR}")
-    print(f"Prompt: {PROMPT[:100]}...\n")
+    print(f"Test set: {len(manifest)} images from {TEST_DIR}\n")
 
     model, processor = load_model()
 
@@ -125,7 +174,7 @@ def main():
             continue
 
         image = Image.open(img_path).convert("RGB").resize((IMG_SIZE, IMG_SIZE))
-        raw, elapsed = infer(model, processor, image)
+        raw, elapsed = infer(model, processor, image, mode=mode, ref_image=ref_image)
         total_time += elapsed
 
         parsed = parse_response(raw)
@@ -169,7 +218,7 @@ def main():
     # Summary
     n = len(results)
     print("\n" + "=" * 70)
-    print(f"BENCHMARK RESULTS — Qwen2.5-VL-3B (base model)")
+    print(f"BENCHMARK RESULTS — Qwen2.5-VL-3B (base model) — {mode}")
     print(f"=" * 70)
     print(f"Images tested:        {n}")
     print(f"JSON validity:        {valid_json}/{n} ({valid_json/n*100:.1f}%)")
@@ -194,9 +243,10 @@ def main():
         print(f"{cls:<6} {sc}/{len(cr):>5} {gc}/{len(cr):>8} {bc}/{len(cr):>6}")
 
     # Save results
-    with open(RESULTS_FILE, "w") as f:
+    with open(results_file, "w") as f:
         json.dump({
             "model": "Qwen2.5-VL-3B-Instruct",
+            "mode": mode,
             "phase": "base_model",
             "total_images": n,
             "json_validity_pct": round(valid_json / n * 100, 1),
@@ -205,7 +255,7 @@ def main():
             "avg_inference_time_s": round(total_time / n, 2),
             "results": results,
         }, f, indent=2)
-    print(f"\nDetailed results saved to {RESULTS_FILE}")
+    print(f"\nDetailed results saved to {results_file}")
 
 
 if __name__ == "__main__":
