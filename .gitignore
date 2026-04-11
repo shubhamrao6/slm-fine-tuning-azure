@@ -1,6 +1,10 @@
 # Datasets — too large for git, transfer separately to VM
 datasets/
 
+# Compressed archives
+*.tar.gz
+*.zip
+
 # Python
 __pycache__/
 *.pyc
