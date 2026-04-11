@@ -1,0 +1,24 @@
+# Datasets — too large for git, transfer separately to VM
+datasets/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Environment files with secrets
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output artifacts
+output/

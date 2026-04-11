@@ -1,0 +1,2 @@
+name: phi4-mm-serverless
+model_id: azureml://registries/azureml/models/Phi-4-multimodal-instruct
