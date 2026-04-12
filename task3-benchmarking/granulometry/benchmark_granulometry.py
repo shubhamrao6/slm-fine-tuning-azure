@@ -105,7 +105,7 @@ def load_model():
         "Qwen/Qwen2.5-VL-3B-Instruct",
         torch_dtype=torch.bfloat16,
         device_map="auto",
-        max_memory={0: "8GiB", 1: "15GiB"},
+        max_memory={0: "6GiB", 1: "15GiB"},
     )
     print(f"Loaded in {time.time()-t:.1f}s")
     for i in range(torch.cuda.device_count()):
@@ -121,7 +121,7 @@ def infer(model, processor, img_path, mode="zero-shot", ref_image=None):
     scale = min(MAX_DIM / orig_max, 1.0)  # don't upscale
     if scale < 1.0:
         new_size = (int(image.width * scale), int(image.height * scale))
-        image = image.resize(new_size, Image.LANCZOS)
+        image = image.resize(new_size, Image.Resampling.LANCZOS)
     actual_gsd = ORIGINAL_GSD * scale
 
     if mode == "few-shot" and ref_image is not None:
@@ -186,7 +186,8 @@ def main():
         raw_ref = Image.open(REF_IMAGE_PATH).convert("RGBA")
         white_bg = Image.new("RGBA", raw_ref.size, (255, 255, 255, 255))
         ref_image = Image.alpha_composite(white_bg, raw_ref).convert("RGB")
-        print(f"Mode: few-shot (reference: {REF_IMAGE_PATH}, white background applied)")
+        ref_image.thumbnail((800, 800), Image.Resampling.LANCZOS)
+        print(f"Mode: few-shot (reference: {REF_IMAGE_PATH}, resized to {ref_image.size})")
     else:
         print(f"Mode: zero-shot (no reference image)")
 
