@@ -118,7 +118,9 @@ def infer(model, processor, img_path, mode="zero-shot", ref_image=None):
     """Load image, resize to MAX_DIM preserving aspect ratio, compute actual GSD, run inference, free memory."""
     image = Image.open(img_path).convert("RGB")
     orig_max = max(image.size)
-    scale = min(MAX_DIM / orig_max, 1.0)  # don't upscale
+    # Use smaller images for few-shot (2 images = 2x VRAM)
+    max_dim = 800 if (mode == "few-shot" and ref_image is not None) else MAX_DIM
+    scale = min(max_dim / orig_max, 1.0)  # don't upscale
     if scale < 1.0:
         new_size = (int(image.width * scale), int(image.height * scale))
         image = image.resize(new_size, Image.Resampling.LANCZOS)
