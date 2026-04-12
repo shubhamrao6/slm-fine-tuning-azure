@@ -28,9 +28,11 @@ from collections import defaultdict
 TEST_DIR = os.environ.get("TEST_DIR", "../../datasets/granulometry/test")
 MANIFEST = os.environ.get("MANIFEST", "../../datasets/granulometry/test_manifest.json")
 REF_IMAGE_PATH = os.path.join(os.path.dirname(__file__), "examples_classification_data.png")
+ORIGINAL_GSD = 8.0   # pixels per mm at original resolution (2200x3000)
+MAX_DIM = 1500        # max pixels on longest side — fits T4 16GB with headroom
 
 PROMPT_ZERO_SHOT = """This is a top-down photograph of concrete aggregate particles.
-The ground sampling distance (GSD) is 8 pixels per mm — use this to measure particle sizes.
+The ground sampling distance (GSD) is {gsd:.1f} pixels per mm — use this to measure particle sizes.
 
 Classification rules:
 - max_particle_size_mm: measure the largest particle visible. Round to the nearest standard sieve size: 8, 16, or 32 mm.
@@ -40,7 +42,7 @@ Classification rules:
   - "fine" means the majority of particles are smaller than 8 mm
 
 Respond with ONLY a JSON object (no other text):
-{"max_particle_size_mm": <8, 16, or 32>, "grading": "<coarse, medium, or fine>"}"""
+{{"max_particle_size_mm": <8, 16, or 32>, "grading": "<coarse, medium, or fine>"}}"""
 
 PROMPT_FEW_SHOT_REF = """The first image is a reference chart for classifying concrete aggregate particles.
 It is a 3x3 grid of example photographs with labeled rows and columns:
@@ -56,13 +58,13 @@ Grading definitions:
 Study this grid carefully, then classify the second image."""
 
 PROMPT_FEW_SHOT_QUERY = """Now classify this photograph of concrete aggregate particles.
-The ground sampling distance (GSD) is 8 pixels per mm — use this to measure particle sizes.
+The ground sampling distance (GSD) is {gsd:.1f} pixels per mm — use this to measure particle sizes.
 
 Compare the particle sizes and distribution to the reference grid.
 Which row (A=coarse, B=medium, C=fine) and column (8mm, 16mm, 32mm) does it best match?
 
 Respond with ONLY a JSON object (no other text):
-{"max_particle_size_mm": <8, 16, or 32>, "grading": "<coarse, medium, or fine>"}"""
+{{"max_particle_size_mm": <8, 16, or 32>, "grading": "<coarse, medium, or fine>"}}"""
 
 
 def parse_response(raw):
@@ -109,21 +111,27 @@ def load_model():
 
 
 def infer(model, processor, img_path, mode="zero-shot", ref_image=None):
-    """Load image from path, run inference, then free memory."""
+    """Load image, resize to MAX_DIM preserving aspect ratio, compute actual GSD, run inference, free memory."""
     image = Image.open(img_path).convert("RGB")
+    orig_max = max(image.size)
+    scale = min(MAX_DIM / orig_max, 1.0)  # don't upscale
+    if scale < 1.0:
+        new_size = (int(image.width * scale), int(image.height * scale))
+        image = image.resize(new_size, Image.LANCZOS)
+    actual_gsd = ORIGINAL_GSD * scale
 
     if mode == "few-shot" and ref_image is not None:
         msgs = [{"role": "user", "content": [
             {"type": "image", "image": ref_image},
             {"type": "text", "text": PROMPT_FEW_SHOT_REF},
             {"type": "image", "image": image},
-            {"type": "text", "text": PROMPT_FEW_SHOT_QUERY},
+            {"type": "text", "text": PROMPT_FEW_SHOT_QUERY.format(gsd=actual_gsd)},
         ]}]
         images = [ref_image, image]
     else:
         msgs = [{"role": "user", "content": [
             {"type": "image", "image": image},
-            {"type": "text", "text": PROMPT_ZERO_SHOT},
+            {"type": "text", "text": PROMPT_ZERO_SHOT.format(gsd=actual_gsd)},
         ]}]
         images = [image]
 
@@ -184,7 +192,8 @@ def main():
     if limit:
         manifest = manifest[:limit]
 
-    print(f"Test set: {len(manifest)} images from {TEST_DIR}\n")
+    print(f"Test set: {len(manifest)} images from {TEST_DIR}")
+    print(f"Max image dimension: {MAX_DIM}px (original GSD: {ORIGINAL_GSD} px/mm, resized GSD: ~{ORIGINAL_GSD * MAX_DIM / 3000:.1f} px/mm)\n")
 
     model, processor = load_model()
 
