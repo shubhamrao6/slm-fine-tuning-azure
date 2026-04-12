@@ -29,7 +29,7 @@ TEST_DIR = os.environ.get("TEST_DIR", "../../datasets/granulometry/test")
 MANIFEST = os.environ.get("MANIFEST", "../../datasets/granulometry/test_manifest.json")
 REF_IMAGE_PATH = os.path.join(os.path.dirname(__file__), "examples_classification_data.png")
 ORIGINAL_GSD = 8.0   # pixels per mm at original resolution (2200x3000)
-MAX_DIM = 1500        # max pixels on longest side — fits T4 16GB with headroom
+MAX_DIM = 1500        # max pixels on longest side
 
 PROMPT_ZERO_SHOT = """This is a top-down photograph of concrete aggregate particles.
 The ground sampling distance (GSD) is {gsd:.1f} pixels per mm — use this to measure particle sizes.
@@ -105,8 +105,12 @@ def load_model():
         "Qwen/Qwen2.5-VL-3B-Instruct",
         torch_dtype=torch.bfloat16,
         device_map="auto",
+        max_memory={0: "8GiB", 1: "15GiB"},
     )
     print(f"Loaded in {time.time()-t:.1f}s")
+    for i in range(torch.cuda.device_count()):
+        alloc = torch.cuda.memory_allocated(i) / 1e9
+        print(f"  GPU {i}: {alloc:.1f} GB allocated")
     return model, processor
 
 
