@@ -27,6 +27,7 @@ PROMPT_ZERO_SHOT = """This is a top-down photo of concrete aggregate. GSD = {gsd
 Classify it on two axes:
 
 MAX PARTICLE SIZE — estimate the largest stone's width in pixels, divide by {gsd:.1f} to get mm, round to 8, 16, or 32.
+Reference: at {gsd:.1f} px/mm, a 8mm stone = ~{eight:.0f}px wide, 16mm = ~{sixteen:.0f}px, 32mm = ~{thirtytwo:.0f}px.
 
 GRADING — describes the size distribution relative to the max size:
 - COARSE: most particles are similar in size, close to the max. Few small particles. Looks uniform.
@@ -54,7 +55,11 @@ PROMPT_FEW_SHOT_QUERY = """Classify this photo. GSD = {gsd:.1f} px/mm.
 
 Compare to the reference grid:
 1. Which COLUMN? (8, 16, or 32mm) — match the largest stone size.
-2. Which ROW? (A=coarse, B=medium, C=fine) — uniform texture = coarse, packed mixed texture = fine.
+   Hint: at {gsd:.1f} px/mm, a 8mm stone = ~{eight:.0f}px wide, 16mm = ~{sixteen:.0f}px, 32mm = ~{thirtytwo:.0f}px.
+2. Which ROW? (A=coarse, B=medium, C=fine)
+   - Uniform texture, most stones similar size = coarse (A)
+   - Dense packed texture, many small particles filling gaps between big ones = fine (C)
+   - In between = medium (B)
 
 Respond with ONLY a JSON object (no other text):
 {{"max_particle_size_mm": <8, 16, or 32>, "grading": "<coarse, medium, or fine>"}}"""
@@ -107,13 +112,15 @@ def infer(model, processor, img_path, mode="zero-shot", ref_image=None):
             {"type": "image", "image": ref_image},
             {"type": "text", "text": PROMPT_FEW_SHOT_REF},
             {"type": "image", "image": image},
-            {"type": "text", "text": PROMPT_FEW_SHOT_QUERY.format(gsd=actual_gsd)},
+            {"type": "text", "text": PROMPT_FEW_SHOT_QUERY.format(
+                gsd=actual_gsd, eight=8*actual_gsd, sixteen=16*actual_gsd, thirtytwo=32*actual_gsd)},
         ]}]
         images = [ref_image, image]
     else:
         msgs = [{"role": "user", "content": [
             {"type": "image", "image": image},
-            {"type": "text", "text": PROMPT_ZERO_SHOT.format(gsd=actual_gsd)},
+            {"type": "text", "text": PROMPT_ZERO_SHOT.format(
+                gsd=actual_gsd, eight=8*actual_gsd, sixteen=16*actual_gsd, thirtytwo=32*actual_gsd)},
         ]}]
         images = [image]
 
