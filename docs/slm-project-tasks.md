@@ -64,22 +64,30 @@ Deploy all models on Azure ML compute instances for controlled testing.
 
 Benchmark the base (un-fine-tuned) models on the specific datasets that will be used for fine-tuning. This establishes the baseline performance that fine-tuning should improve upon.
 
-### Objective
-Run the base models on the TEST SPLIT of each dataset and record metrics. These scores become the "before" in the before/after comparison.
+### Status: Done (Granulometry)
 
 ### Use Case A: Granulometry — Qwen2.5-VL-3B
 
-**Dataset**: Granulometry / particle size dataset (images of particles with ground truth sizes)
-- Split: train (10-15 images for Task 4 fine-tuning) / test (5-10 images for benchmarking)
-- Task: Given an image of particles, output JSON with detected particles and their sizes
+**Dataset**: 108 test images, 9 classes (A8/A16/A32/B8/B16/B32/C8/C16/C32)
+- Max particle size: 8, 16, or 32mm
+- Grading (DIN 1045): coarse (A), medium (B), fine (C) — describes size distribution, not absolute size
 
-**Metrics**:
-- Detection accuracy: % of particles correctly identified
-- Size estimation error: mean absolute error of predicted vs actual particle sizes
-- JSON validity: % of responses that are valid parseable JSON
-- Inference time per image
+**Results**:
 
-**Baseline expectation**: The base Qwen2.5-VL-3B should be able to identify particles but will likely struggle with precise size measurements and consistent JSON output format.
+| Metric | Zero-Shot (1500px) | Few-Shot (1400px + ref) |
+|--------|-------------------|------------------------|
+| JSON validity | 100% | 100% |
+| Size accuracy | 36.1% | 36.1% |
+| Grading accuracy | 34.3% | 24.1% |
+| Both correct | 12.0% | 8.3% |
+| Avg inference time | 8.9s | 9.4s |
+
+**Key findings**:
+- Base model performs at random chance (~33%) on both axes
+- Zero-shot biases toward 16mm/medium; few-shot biases toward 32mm/fine
+- 100% JSON validity — format works, content is wrong
+- Model can reason about the task in natural language but fails at direct JSON classification
+- LoRA fine-tuning is necessary to teach the visual-to-classification mapping
 
 ### Use Case B: Cybersecurity — Phi-4-multimodal
 
@@ -146,9 +154,10 @@ Prove that LoRA fine-tuning with 10-15 training examples produces measurable imp
 
 | Metric | Before (Task 3) | After (Task 4) | Expected Improvement |
 |--------|-----------------|-----------------|---------------------|
-| JSON validity | ~50-70% | ~95%+ | Model learns exact output format |
-| Task accuracy | ~30-50% | ~80%+ | Model learns domain-specific patterns |
-| Output consistency | Low | High | LoRA stabilizes output structure |
+| JSON validity | 100% | ~100% | Already perfect |
+| Size accuracy | ~36% | ~80%+ | Model learns visual-to-size mapping |
+| Grading accuracy | ~34% | ~80%+ | Model learns distribution patterns |
+| Both correct | ~12% | ~70%+ | Combined improvement |
 
 ### Deliverables
 - Fine-tuning scripts for both models
@@ -215,7 +224,7 @@ Task 1: Serverless Inference ──────── Done
   ↓
 Task 2: Cloud VM Inference ────────── Done
   ↓
-Task 3: Benchmarking (base models) ── Baseline metrics on test split
+Task 3: Benchmarking (base models) ── Done — baseline: ~36% size, ~34% grading
   ↓
 Task 4: Fine-Tuning (LoRA) ────────── Train on train split, re-benchmark on test split
   ↓

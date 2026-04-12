@@ -16,7 +16,7 @@ Evaluate and compare Small Language Models (SLMs) for industrial computer vision
 ```
 ├── task1-serverless-inference/   # Phi-4 serverless API testing (Done)
 ├── task2-cloud-vm-inference/     # All 4 models on Azure ML GPU VMs (Done)
-├── task3-benchmarking/           # Base model benchmarking on test sets (In Progress)
+├── task3-benchmarking/           # Base model benchmarking on test sets (Done)
 ├── task4-fine-tuning/            # LoRA fine-tuning (Planned)
 ├── task5-quantization/           # INT4 quantization + edge sim (Planned)
 ├── experiments/                  # Early Phi-4 local inference & object detection tests
@@ -54,7 +54,7 @@ az ml compute start --name slm-workbench --resource-group CashAPI --workspace-na
 |------|--------|---------|
 | Task 1: Serverless Inference | Done | Phi-4 deployed, tested via API |
 | Task 2: Cloud VM Inference | Done | All 4 models compared on V100 |
-| Task 3: Benchmarking | In Progress | Base model metrics on granulometry test set |
+| Task 3: Benchmarking | Done | Base model baseline on granulometry test set |
 | Task 4: LoRA Fine-Tuning | Planned | Qwen-3B on granulometry, Phi-4 on cybersecurity |
 | Task 5: Quantization + Edge | Planned | INT4 quantization, test on T4 (edge sim) |
 | Task 6: Industrial Validation | Planned | 100+ image validation run |
@@ -67,6 +67,18 @@ az ml compute start --name slm-workbench --resource-group CashAPI --workspace-na
 - Qwen2.5-VL-3B: Best VLM balance — good quality, reasonable speed (3–12s), reliable structured output
 - Qwen2.5-VL-7B: Slower than 3B with worse results — not worth the extra size
 - Phi-4-multimodal: Slowest (12–210s), inconsistent structured output — not suitable for detection
+
+### Task 3 Baseline Results (Qwen2.5-VL-3B, granulometry)
+
+| Metric | Zero-Shot (1500px) | Few-Shot (1400px + ref) |
+|--------|-------------------|------------------------|
+| JSON validity | 100% | 100% |
+| Size accuracy | 36.1% | 36.1% |
+| Grading accuracy | 34.3% | 24.1% |
+| Both correct | 12.0% | 8.3% |
+| Avg inference time | 8.9s | 9.4s |
+
+The base model performs near random chance (33%) on both axes. It understands the concepts when reasoning in natural language but cannot reliably map visual input to correct JSON classifications without fine-tuning. This establishes the baseline that Task 4 (LoRA) should improve.
 
 ## Datasets
 
