@@ -28,26 +28,40 @@ from collections import defaultdict
 TEST_DIR = os.environ.get("TEST_DIR", "../../datasets/granulometry/test")
 MANIFEST = os.environ.get("MANIFEST", "../../datasets/granulometry/test_manifest.json")
 REF_IMAGE_PATH = os.path.join(os.path.dirname(__file__), "examples_classification_data.png")
-IMG_SIZE = 500
 
-PROMPT_ZERO_SHOT = """This image shows concrete aggregate particles photographed from above.
-The image resolution is 8 pixels per mm.
+PROMPT_ZERO_SHOT = """This is a top-down photograph of concrete aggregate particles.
+The ground sampling distance (GSD) is 8 pixels per mm — use this to measure particle sizes.
 
-Analyze the particles and respond with ONLY a JSON object (no other text):
-{"max_particle_size_mm": <estimated maximum particle size as integer: 8, 16, or 32>, "grading": "<coarse, medium, or fine>"}
+Classification rules:
+- max_particle_size_mm: measure the largest particle visible. Round to the nearest standard sieve size: 8, 16, or 32 mm.
+- grading:
+  - "coarse" means the majority of particles are larger than 16 mm
+  - "medium" means the majority of particles are between 8 mm and 16 mm
+  - "fine" means the majority of particles are smaller than 8 mm
 
-The values 8, 16, 32 for max_particle_size_mm and coarse, medium, fine for grading are for reference. Use the actual values based on what you observe."""
+Respond with ONLY a JSON object (no other text):
+{"max_particle_size_mm": <8, 16, or 32>, "grading": "<coarse, medium, or fine>"}"""
 
-PROMPT_FEW_SHOT_REF = """The first image is a reference chart showing examples of concrete aggregate classification.
-It shows 9 classes across two dimensions:
-- Columns: max particle size (8mm, 16mm, 32mm)
-- Rows: grading (A = coarse, B = medium, C = fine)
+PROMPT_FEW_SHOT_REF = """The first image is a reference chart for classifying concrete aggregate particles.
+It is a 3x3 grid of example photographs with labeled rows and columns:
+- The 3 COLUMNS represent max particle size, labeled left to right: 8 mm, 16 mm, 32 mm
+- The 3 ROWS represent grading type, labeled top to bottom: A (coarse), B (medium), C (fine)
+- Each cell shows a real example of that combination (e.g. top-right = A/32mm = coarse grading with 32 mm max particle size)
 
-Use this reference to classify the second image."""
+Grading definitions:
+- Coarse (row A): majority of particles are larger than 16 mm
+- Medium (row B): majority of particles are between 8 mm and 16 mm
+- Fine (row C): majority of particles are smaller than 8 mm
 
-PROMPT_FEW_SHOT_QUERY = """Now analyze this image of concrete aggregate particles (8 pixels per mm resolution).
+Study this grid carefully, then classify the second image."""
 
-Based on the reference chart, respond with ONLY a JSON object (no other text):
+PROMPT_FEW_SHOT_QUERY = """Now classify this photograph of concrete aggregate particles.
+The ground sampling distance (GSD) is 8 pixels per mm — use this to measure particle sizes.
+
+Compare the particle sizes and distribution to the reference grid.
+Which row (A=coarse, B=medium, C=fine) and column (8mm, 16mm, 32mm) does it best match?
+
+Respond with ONLY a JSON object (no other text):
 {"max_particle_size_mm": <8, 16, or 32>, "grading": "<coarse, medium, or fine>"}"""
 
 
@@ -94,7 +108,10 @@ def load_model():
     return model, processor
 
 
-def infer(model, processor, image, mode="zero-shot", ref_image=None):
+def infer(model, processor, img_path, mode="zero-shot", ref_image=None):
+    """Load image from path, run inference, then free memory."""
+    image = Image.open(img_path).convert("RGB")
+
     if mode == "few-shot" and ref_image is not None:
         msgs = [{"role": "user", "content": [
             {"type": "image", "image": ref_image},
@@ -112,10 +129,19 @@ def infer(model, processor, image, mode="zero-shot", ref_image=None):
 
     text = processor.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
     inputs = processor(text=[text], images=images, return_tensors="pt", padding=True).to(model.device)
+
     t = time.time()
-    ids = model.generate(**inputs, max_new_tokens=128, temperature=0.1, do_sample=True)
+    with torch.no_grad():
+        ids = model.generate(**inputs, max_new_tokens=128, temperature=0.1, do_sample=True)
     elapsed = time.time() - t
+
     out = processor.batch_decode(ids[:, inputs.input_ids.shape[1]:], skip_special_tokens=True)[0]
+
+    # Free GPU memory
+    del inputs, ids
+    image.close()
+    torch.cuda.empty_cache()
+
     return out.strip(), elapsed
 
 
@@ -145,8 +171,10 @@ def main():
             print(f"Error: Reference image not found at {REF_IMAGE_PATH}")
             print("Few-shot mode requires examples_classification_data.png in the script directory.")
             sys.exit(1)
-        ref_image = Image.open(REF_IMAGE_PATH).convert("RGB")
-        print(f"Mode: few-shot (reference: {REF_IMAGE_PATH})")
+        raw_ref = Image.open(REF_IMAGE_PATH).convert("RGBA")
+        white_bg = Image.new("RGBA", raw_ref.size, (255, 255, 255, 255))
+        ref_image = Image.alpha_composite(white_bg, raw_ref).convert("RGB")
+        print(f"Mode: few-shot (reference: {REF_IMAGE_PATH}, white background applied)")
     else:
         print(f"Mode: zero-shot (no reference image)")
 
@@ -173,8 +201,7 @@ def main():
             print(f"  Skipping {entry['image']} (not found)")
             continue
 
-        image = Image.open(img_path).convert("RGB").resize((IMG_SIZE, IMG_SIZE))
-        raw, elapsed = infer(model, processor, image, mode=mode, ref_image=ref_image)
+        raw, elapsed = infer(model, processor, img_path, mode=mode, ref_image=ref_image)
         total_time += elapsed
 
         parsed = parse_response(raw)
