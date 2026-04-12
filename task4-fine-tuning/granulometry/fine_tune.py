@@ -1,5 +1,6 @@
 """
-QLoRA fine-tuning of Qwen2.5-VL-3B for granulometry classification.
+LoRA fine-tuning of Qwen2.5-VL-3B for granulometry classification.
+Uses full BF16 precision (not QLoRA) for maximum quality.
 
 Usage:
     # Approach A: Standard LoRA (18 direct examples)
@@ -27,7 +28,6 @@ LORA_TARGETS = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", 
 
 
 def main():
-    # Parse args
     data_path = "training_data_direct.jsonl"
     output_dir = "lora_direct"
     epochs = DEFAULT_EPOCHS
@@ -45,37 +45,26 @@ def main():
     print(f"Epochs: {epochs}, LR: {lr}")
     print(f"LoRA: r={LORA_R}, alpha={LORA_ALPHA}, targets={LORA_TARGETS}")
 
-    # Load training data
     with open(data_path) as f:
         train_data = [json.loads(line) for line in f]
     print(f"Training examples: {len(train_data)}")
 
-    # Load model with 4-bit quantization
+    # Load model in full BF16 precision (not quantized)
     from transformers import (
         Qwen2_5_VLForConditionalGeneration,
         AutoProcessor,
-        BitsAndBytesConfig,
         TrainingArguments,
     )
-    from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-    from trl import SFTTrainer
+    from peft import LoraConfig, get_peft_model
 
-    bnb_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-        bnb_4bit_use_double_quant=True,
-    )
-
-    print("Loading model (4-bit)...")
+    print("Loading model (BF16 full precision)...")
     processor = AutoProcessor.from_pretrained(MODEL_ID)
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         MODEL_ID,
-        quantization_config=bnb_config,
         device_map="auto",
         torch_dtype=torch.bfloat16,
     )
-    model = prepare_model_for_kbit_training(model)
+    model.enable_input_require_grads()  # required for LoRA training
 
     # Apply LoRA
     lora_config = LoraConfig(
@@ -89,36 +78,8 @@ def main():
     model = get_peft_model(model, lora_config)
     model.print_trainable_parameters()
 
-    # Prepare dataset
-    def format_example(example):
-        """Convert JSONL record to chat format for the processor."""
-        messages = example["messages"]
-        # Extract image path and text from user message
-        user_content = messages[0]["content"]
-        img_path = None
-        text_parts = []
-        for item in user_content:
-            if item["type"] == "image":
-                img_path = item["image"]
-            elif item["type"] == "text":
-                text_parts.append(item["text"])
-
-        user_text = "\n".join(text_parts)
-        assistant_text = messages[1]["content"]
-
-        # Build chat messages for processor
-        chat = [
-            {"role": "user", "content": [
-                {"type": "image", "image": Image.open(img_path).convert("RGB")} if img_path else None,
-                {"type": "text", "text": user_text},
-            ]},
-            {"role": "assistant", "content": [
-                {"type": "text", "text": assistant_text},
-            ]},
-        ]
-        # Remove None entries
-        chat[0]["content"] = [c for c in chat[0]["content"] if c is not None]
-        return chat
+    for i in range(torch.cuda.device_count()):
+        print(f"  GPU {i}: {torch.cuda.memory_allocated(i)/1e9:.1f} GB")
 
     # Training arguments
     training_args = TrainingArguments(
@@ -140,24 +101,23 @@ def main():
         report_to="none",
     )
 
-    # Note: The exact training loop depends on the SFTTrainer version and
-    # Qwen2.5-VL's multimodal data collator. This may need adjustment
-    # based on the installed library versions on the VM.
-    # See: https://connectaman.hashnode.dev/fine-tuning-the-qwen25-7b-vl-instruct-model
-    print(f"\nStarting training: {len(train_data)} examples, {epochs} epochs")
-    print(f"Effective batch size: {DEFAULT_BATCH * DEFAULT_GRAD_ACCUM}")
-    print(f"Total steps: ~{len(train_data) * epochs // (DEFAULT_BATCH * DEFAULT_GRAD_ACCUM)}")
+    print(f"\nConfig ready:")
+    print(f"  Training examples: {len(train_data)}")
+    print(f"  Epochs: {epochs}, LR: {lr}")
+    print(f"  Effective batch size: {DEFAULT_BATCH * DEFAULT_GRAD_ACCUM}")
+    print(f"  Total steps: ~{len(train_data) * epochs // (DEFAULT_BATCH * DEFAULT_GRAD_ACCUM)}")
 
-    # TODO: Implement the actual training loop.
-    # The multimodal collator for Qwen2.5-VL requires specific handling
+    # TODO: Implement the training loop.
+    # The multimodal data collator for Qwen2.5-VL requires specific handling
     # of image tokens. Two options:
     #
     # Option 1: Use trl.SFTTrainer with a custom data collator
     # Option 2: Manual training loop with processor + model.forward()
     #
     # The exact implementation depends on library versions on the VM.
-    # Run `pip list | grep -E "trl|peft|transformers"` to check.
-    print("\n[TODO] Training loop implementation — see README for references")
+    # Run: pip list | grep -E "trl|peft|transformers"
+    # See: https://connectaman.hashnode.dev/fine-tuning-the-qwen25-7b-vl-instruct-model
+    print(f"\n[TODO] Training loop — see README for references")
     print(f"Model and LoRA config ready. Output will be saved to {output_dir}/")
 
 

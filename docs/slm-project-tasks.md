@@ -89,6 +89,17 @@ Benchmark the base (un-fine-tuned) models on the specific datasets that will be 
 - Model can reason about the task in natural language but fails at direct JSON classification
 - LoRA fine-tuning is necessary to teach the visual-to-classification mapping
 
+**Frontier model comparison** (same 108 test images):
+
+| Model | Mode | Size | Grading | Both |
+|-------|------|------|---------|------|
+| GPT-5 | Zero-shot | 59.3% | 33.3% | 18.5% |
+| GPT-5 | Few-shot | 66.7% | 33.3% | 22.2% |
+| GPT-4.1 | Zero-shot (t=0.7) | 53.7% | 49.1% | 31.5% |
+| GPT-4.1 | Few-shot (t=0.7) | 62.0% | 59.3% | 29.6% |
+
+GPT-4.1 few-shot is the best frontier model — only one to break past random on grading. Selected as SEAL teacher for Task 4.
+
 ### Use Case B: Cybersecurity — Phi-4-multimodal
 
 **Dataset**: Cybersecurity agent dataset (text-based scenarios with expected agent responses)

@@ -55,7 +55,7 @@ az ml compute start --name slm-workbench --resource-group CashAPI --workspace-na
 | Task 1: Serverless Inference | Done | Phi-4 deployed, tested via API |
 | Task 2: Cloud VM Inference | Done | All 4 models compared on V100 |
 | Task 3: Benchmarking | Done | Base model baseline on granulometry test set |
-| Task 4: LoRA Fine-Tuning | In Progress | Standard LoRA (18 ex) + SEAL-inspired augmented LoRA (~150 ex) |
+| Task 4: LoRA Fine-Tuning | In Progress | Standard LoRA + SEAL-inspired (GPT-4.1 as teacher) |
 | Task 5: Quantization + Edge | Planned | INT4 quantization, test on T4 (edge sim) |
 | Task 6: Industrial Validation | Planned | 100+ image validation run |
 | Task 7: LoRA Swap Demo | Planned | Adapter hot-swap proof of concept |
@@ -78,7 +78,16 @@ az ml compute start --name slm-workbench --resource-group CashAPI --workspace-na
 | Both correct | 12.0% | 8.3% |
 | Avg inference time | 8.9s | 9.4s |
 
-The base model performs near random chance (33%) on both axes. It understands the concepts when reasoning in natural language but cannot reliably map visual input to correct JSON classifications without fine-tuning. This establishes the baseline that Task 4 (LoRA) should improve.
+### Frontier Model Results (same 108 test images)
+
+| Model | Mode | Size | Grading | Both | Time |
+|-------|------|------|---------|------|------|
+| GPT-5 | Zero-shot | 59.3% | 33.3% | 18.5% | 11.9s |
+| GPT-5 | Few-shot | 66.7% | 33.3% | 22.2% | 15.8s |
+| GPT-4.1 | Zero-shot (t=0.7) | 53.7% | 49.1% | 31.5% | 4.3s |
+| GPT-4.1 | Few-shot (t=0.7) | 62.0% | 59.3% | 29.6% | 4.7s |
+
+GPT-4.1 few-shot with temperature control is the best performer — the only model to break past random chance on grading (59.3% vs 33.3%). Selected as the SEAL teacher for Task 4.
 
 ## Datasets
 
