@@ -17,7 +17,7 @@ Evaluate and compare Small Language Models (SLMs) for industrial computer vision
 ├── task1-serverless-inference/   # Phi-4 serverless API testing (Done)
 ├── task2-cloud-vm-inference/     # All 4 models on Azure ML GPU VMs (Done)
 ├── task3-benchmarking/           # Base model benchmarking on test sets (Done)
-├── task4-fine-tuning/            # LoRA fine-tuning (Planned)
+├── task4-fine-tuning/            # LoRA fine-tuning: standard + SEAL-inspired (In Progress)
 ├── task5-quantization/           # INT4 quantization + edge sim (Planned)
 ├── experiments/                  # Early Phi-4 local inference & object detection tests
 │   ├── phi4-local-inference/
@@ -55,7 +55,7 @@ az ml compute start --name slm-workbench --resource-group CashAPI --workspace-na
 | Task 1: Serverless Inference | Done | Phi-4 deployed, tested via API |
 | Task 2: Cloud VM Inference | Done | All 4 models compared on V100 |
 | Task 3: Benchmarking | Done | Base model baseline on granulometry test set |
-| Task 4: LoRA Fine-Tuning | Planned | Qwen-3B on granulometry, Phi-4 on cybersecurity |
+| Task 4: LoRA Fine-Tuning | In Progress | Standard LoRA (18 ex) + SEAL-inspired augmented LoRA (~150 ex) |
 | Task 5: Quantization + Edge | Planned | INT4 quantization, test on T4 (edge sim) |
 | Task 6: Industrial Validation | Planned | 100+ image validation run |
 | Task 7: LoRA Swap Demo | Planned | Adapter hot-swap proof of concept |
