@@ -163,12 +163,23 @@ Prove that LoRA fine-tuning with 10-15 training examples produces measurable imp
 
 ### Expected Results
 
-| Metric | Before (Task 3) | After (Task 4) | Expected Improvement |
-|--------|-----------------|-----------------|---------------------|
-| JSON validity | 100% | ~100% | Already perfect |
-| Size accuracy | ~36% | ~80%+ | Model learns visual-to-size mapping |
-| Grading accuracy | ~34% | ~80%+ | Model learns distribution patterns |
-| Both correct | ~12% | ~70%+ | Combined improvement |
+| Metric | Before (Task 3) | After (Task 4) | Actual Result |
+|--------|-----------------|-----------------|---------------|
+| JSON validity | 100% | ~100% | 100% |
+| Size accuracy | ~36% | ~80%+ | 91.7% (SEAL) |
+| Grading accuracy | ~34% | ~80%+ | 86.1% (SEAL) |
+| Both correct | ~12% | ~70%+ | 79.6% (SEAL) |
+
+### Actual Results
+
+| Method | Size | Grading | Both |
+|--------|------|---------|------|
+| Qwen base (zero-shot) | 36.1% | 34.3% | 12.0% |
+| GPT-4.1 (few-shot) | 62.0% | 59.3% | 29.6% |
+| LoRA Direct (18 images → JSON) | 89.8% | 78.7% | 71.3% |
+| LoRA + CoT Distillation (18 images → description + JSON) | 91.7% | 86.1% | 79.6% |
+
+Winner: SEAL-inspired CoT distillation. Proceeds to Task 5 for quantization.
 
 ### Deliverables
 - Fine-tuning scripts for both models
@@ -237,9 +248,9 @@ Task 2: Cloud VM Inference ────────── Done
   ↓
 Task 3: Benchmarking (base models) ── Done — baseline: ~36% size, ~34% grading
   ↓
-Task 4: Fine-Tuning (LoRA) ────────── Train on train split, re-benchmark on test split
+Task 4: Fine-Tuning (LoRA) ────────── Done — Direct: 71.3%, SEAL CoT: 79.6% both correct
   ↓
-Task 5: Quantize + Edge Deploy ────── Quantize fine-tuned models, test on T4
+Task 5: Quantize + Edge Deploy ────── Quantize winning model to INT4, test on T4
   ↓
 Task 6: Industrial Validation ─────── Go/no-go
   ↓
