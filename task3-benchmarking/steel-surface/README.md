@@ -33,6 +33,7 @@ Same methodology as granulometry: zero-shot, few-shot, and frontier model compar
 
 | File | Description |
 |------|-------------|
-| `benchmark_steel.ipynb` | Main benchmark notebook (Qwen + frontier) |
+| `benchmark_steel.ipynb` | Main benchmark notebook (Qwen zero-shot + few-shot) |
+| `benchmark_frontier.ipynb` | Frontier model benchmark (GPT-4.1 + GPT-5) |
 | `config.py` | Shared config and prompts |
 | `Sample-images-in-the-NEU-CLS-dataset.png` | Reference image for few-shot |
