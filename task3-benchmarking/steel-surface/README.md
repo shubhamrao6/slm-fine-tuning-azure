@@ -27,7 +27,7 @@ Same methodology as granulometry: zero-shot, few-shot, and frontier model compar
 
 ## Reference Image
 
-`../Sample-images-in-the-NEU-CLS-dataset.png` — shows examples of all 6 classes for few-shot prompting.
+`Sample-images-in-the-NEU-CLS-dataset.png` — shows examples of all 6 classes for few-shot prompting.
 
 ## Files
 
@@ -35,4 +35,4 @@ Same methodology as granulometry: zero-shot, few-shot, and frontier model compar
 |------|-------------|
 | `benchmark_steel.ipynb` | Main benchmark notebook (Qwen + frontier) |
 | `config.py` | Shared config and prompts |
-| `../Sample-images-in-the-NEU-CLS-dataset.png` | Reference image for few-shot |
+| `Sample-images-in-the-NEU-CLS-dataset.png` | Reference image for few-shot |
