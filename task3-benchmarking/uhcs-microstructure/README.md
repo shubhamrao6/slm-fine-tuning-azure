@@ -34,6 +34,39 @@ Each image has associated heat treatment parameters:
 
 Magnification is included in the prompt (like GSD in granulometry).
 
+## Benchmark Results (120 test images)
+
+| Method | Accuracy | JSON Valid | Time/img |
+|--------|----------|-----------|----------|
+| Qwen2.5-VL-3B (ZS) | 60.8% | 100% | 2.5s |
+| Qwen2.5-VL-3B (FS) | 42.5% | 100% | 3.6s |
+| GPT-4.1 (ZS, t=0.7) | 46.7% | 100% | 2.4s |
+| GPT-4.1 (FS, t=0.7) | 71.7% | 100% | 3.7s |
+| GPT-5 (ZS, t=1) | 61.7% | 100% | 11.5s |
+| GPT-5 (FS, t=1) | 80.0% | 100% | 11.1s |
+| Random chance | 16.7% | — | — |
+
+### Per-Class Accuracy
+
+| Class | N | Qwen ZS | Qwen FS | GPT-4.1 ZS | GPT-4.1 FS | GPT-5 ZS | GPT-5 FS |
+|-------|---|---------|---------|------------|------------|----------|----------|
+| spheroidite | 74 | 73% | 51% | 34% | 62% | 46% | 74% |
+| network | 20 | 95% | 35% | 100% | 80% | 100% | 95% |
+| spheroidite+widmanstatten | 15 | 0% | 13% | 60% | 93% | 93% | 93% |
+| pearlite+spheroidite | 5 | 0% | 80% | 40% | 100% | 40% | 80% |
+| pearlite | 3 | 0% | 0% | 0% | 67% | 67% | 100% |
+| pearlite+widmanstatten | 3 | 0% | 0% | 0% | 100% | 67% | 33% |
+
+### Key Findings
+
+- GPT-5 FS (80.0%) is the best overall — outperforms GPT-4.1 FS (71.7%) on this task
+- Qwen ZS (60.8%) surprisingly beats GPT-4.1 ZS (46.7%) — but Qwen is biased toward spheroidite (73% of test set is spheroidite, so predicting it often gets lucky)
+- Qwen FS (42.5%) is worse than ZS — the reference grid confuses the small model on this domain
+- Network class is easy for all models (80-100%) — the grain boundary web pattern is visually distinctive
+- Compound classes (spheroidite+widmanstatten, pearlite+spheroidite) are hard zero-shot but frontier models handle them well few-shot
+- Pearlite classes have very few test samples (3-5) — results are noisy but directionally useful
+- This is the hardest task so far — even GPT-5 FS only reaches 80%, making it a strong candidate for CoT distillation improvement
+
 ## Files
 
 | File | Description |

@@ -1,0 +1,1451 @@
+{
+  "model": "gpt-4.1",
+  "mode": "gpt41_zs",
+  "dataset": "UHCS",
+  "total_images": 120,
+  "accuracy_pct": 46.7,
+  "json_validity_pct": 100.0,
+  "avg_inference_time_s": 2.4,
+  "results": [
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1633.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.0
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1427.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1392.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.6
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1173.png",
+      "class": "spheroidite",
+      "magnification": "19641x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.21
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph956.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.32
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1686.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.13
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1105.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.02
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph747.png",
+      "class": "spheroidite",
+      "magnification": "unknown",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.34
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph237.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.36
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1120.png",
+      "class": "spheroidite",
+      "magnification": "unknown",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.74
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph561.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.87
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1201.png",
+      "class": "spheroidite",
+      "magnification": "3437x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.45
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1518.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1189.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph170.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph864.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.98
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph616.png",
+      "class": "spheroidite",
+      "magnification": "786x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.09
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1013.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.55
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1385.png",
+      "class": "spheroidite",
+      "magnification": "unknown",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.62
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1524.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.04
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1337.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.1
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph352.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.87
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1581.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.78
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph641.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.59
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1092.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.59
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1348.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.01
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph386.png",
+      "class": "spheroidite",
+      "magnification": "3437X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.48
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1249.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.85
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1195.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.88
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1027.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.19
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1516.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.59
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1167.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.73
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph363.png",
+      "class": "spheroidite",
+      "magnification": "786x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.66
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph664.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.48
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1517.png",
+      "class": "spheroidite",
+      "magnification": "3437X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 4.42
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1626.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.06
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph402.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.68
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph493.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1098.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.48
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph708.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.05
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph311.png",
+      "class": "spheroidite",
+      "magnification": "4910x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.99
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph435.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph512.png",
+      "class": "spheroidite",
+      "magnification": "3437X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1020.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.31
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph867.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.84
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph148.png",
+      "class": "spheroidite",
+      "magnification": "3437x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 5.25
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1038.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1018.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.07
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1164.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.51
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph451.png",
+      "class": "spheroidite",
+      "magnification": "786x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.76
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1112.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.14
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph442.png",
+      "class": "spheroidite",
+      "magnification": "unknown",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.75
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1196.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.33
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph312.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.02
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph138.png",
+      "class": "spheroidite",
+      "magnification": "491x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.99
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1202.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph248.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.86
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1058.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1139.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.95
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph178.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1483.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.33
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph422.png",
+      "class": "spheroidite",
+      "magnification": "4910x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph369.png",
+      "class": "spheroidite",
+      "magnification": "4910x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph53.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.3
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph337.png",
+      "class": "spheroidite",
+      "magnification": "1473X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.35
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph917.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.55
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1183.png",
+      "class": "spheroidite",
+      "magnification": "3437X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.33
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph407.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph436.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.13
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1556.png",
+      "class": "spheroidite",
+      "magnification": "unknown",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.99
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1611.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.95
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1466.png",
+      "class": "spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.63
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1192.png",
+      "class": "spheroidite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.59
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph398.png",
+      "class": "spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.05
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph173.png",
+      "class": "network",
+      "magnification": "98x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.44
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph383.png",
+      "class": "network",
+      "magnification": "98X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph649.png",
+      "class": "network",
+      "magnification": "98x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.1
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph396.png",
+      "class": "network",
+      "magnification": "98X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.05
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph820.png",
+      "class": "network",
+      "magnification": "98x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.09
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1266.png",
+      "class": "network",
+      "magnification": "246x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.94
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1374.png",
+      "class": "network",
+      "magnification": "98X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.13
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph403.png",
+      "class": "network",
+      "magnification": "64x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.03
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1283.png",
+      "class": "network",
+      "magnification": "98X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.68
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph965.png",
+      "class": "network",
+      "magnification": "246x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.99
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph384.png",
+      "class": "network",
+      "magnification": "49X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.38
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph741.png",
+      "class": "network",
+      "magnification": "98X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.02
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1490.png",
+      "class": "network",
+      "magnification": "98x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.66
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1710.png",
+      "class": "network",
+      "magnification": "98x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.72
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1454.png",
+      "class": "network",
+      "magnification": "98X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.23
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph999.png",
+      "class": "network",
+      "magnification": "98x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.3
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph865.png",
+      "class": "network",
+      "magnification": "246x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.95
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1302.png",
+      "class": "network",
+      "magnification": "98X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.57
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1240.png",
+      "class": "network",
+      "magnification": "98x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.8
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph306.png",
+      "class": "network",
+      "magnification": "98X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.85
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph989.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "491x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 4.38
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1298.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "1178X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.43
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph579.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.68
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph717.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "491x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph359.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1063.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.97
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph881.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "1473X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.57
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1560.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "2455X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.36
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1005.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.84
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph26.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.86
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph37.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.97
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1601.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "491x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.96
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph862.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.75
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph58.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.72
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1415.png",
+      "class": "spheroidite+widmanstatten",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.97
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph499.png",
+      "class": "pearlite+spheroidite",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.98
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph997.png",
+      "class": "pearlite+spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph704.png",
+      "class": "pearlite+spheroidite",
+      "magnification": "3437X",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.39
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1503.png",
+      "class": "pearlite+spheroidite",
+      "magnification": "unknown",
+      "predicted": {
+        "primary_microconstituent": "pearlite+spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"pearlite+spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.52
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph224.png",
+      "class": "pearlite+spheroidite",
+      "magnification": "1964X",
+      "predicted": {
+        "primary_microconstituent": "pearlite+spheroidite"
+      },
+      "raw": "{\"primary_microconstituent\": \"pearlite+spheroidite\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.1
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph5.png",
+      "class": "pearlite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "pearlite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"pearlite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.48
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1300.png",
+      "class": "pearlite",
+      "magnification": "7856X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.41
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph928.png",
+      "class": "pearlite",
+      "magnification": "4910X",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph553.png",
+      "class": "pearlite+widmanstatten",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "network"
+      },
+      "raw": "{\"primary_microconstituent\": \"network\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.69
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1104.png",
+      "class": "pearlite+widmanstatten",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/uh-carbon-steel/For Training/Cropped/Croppedmicrograph1215.png",
+      "class": "pearlite+widmanstatten",
+      "magnification": "982x",
+      "predicted": {
+        "primary_microconstituent": "spheroidite+widmanstatten"
+      },
+      "raw": "{\"primary_microconstituent\": \"spheroidite+widmanstatten\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.97
+    }
+  ]
+}

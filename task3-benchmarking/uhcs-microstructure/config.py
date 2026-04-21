@@ -36,12 +36,12 @@ def make_prompt_zs(magnification: str = "unknown") -> str:
 This is an optical/SEM micrograph at approximately {magnification} magnification showing the microstructure of UHCS after heat treatment.
 
 Possible microconstituent classes:
-1. SPHEROIDITE: globular (spheroidized) cementite particles scattered in a ferrite matrix. Round/oval dark particles on light background. "Polka dot" appearance.
-2. NETWORK: continuous cementite network along prior austenite grain boundaries. Dark connected lines forming a web/mesh pattern outlining grains.
-3. SPHEROIDITE+WIDMANSTATTEN: mix of spheroidized particles AND straight needle/plate-like Widmanstatten cementite growing from grain boundaries. Both round dots and elongated plates visible.
-4. PEARLITE+SPHEROIDITE: regions of lamellar pearlite (fingerprint-like striations) coexisting with scattered spheroidized particles. Partial spheroidization.
-5. PEARLITE: alternating lamellae of ferrite and cementite. Fingerprint-like parallel dark/light striations. At low magnification appears as dark colonies.
-6. PEARLITE+WIDMANSTATTEN: lamellar pearlite colonies in grain interiors combined with needle-like Widmanstatten plates at grain boundaries.
+1. spheroidite: Scattered dark round/oval cementite particles on a light ferrite matrix. The particles are isolated, roughly spherical, and uniformly distributed. Looks like "polka dots." This forms from prolonged annealing below the eutectoid temperature.
+2. network: Dark continuous lines forming a connected web/mesh pattern. These are cementite films along prior austenite grain boundaries. The lines outline polygonal grain shapes. Forms during slow cooling from above A1.
+3. spheroidite+widmanstatten: A mix of round spheroidized particles AND straight elongated needle/plate-like features growing inward from grain boundaries. You see both "dots" and "needles" in the same image. Indicates partial spheroidization of Widmanstatten cementite.
+4. pearlite+spheroidite: Regions showing fingerprint-like lamellar striations (pearlite) alongside areas with scattered round particles (spheroidite). Two distinct textures coexist. Indicates incomplete spheroidization of pearlite.
+5. pearlite: Fine parallel alternating dark/light lamellae creating a fingerprint or wood-grain pattern. Very regular, closely-spaced striations. Requires high magnification to resolve individual lamellae.
+6. pearlite+widmanstatten: Lamellar pearlite colonies (fingerprint texture) in grain interiors combined with long straight needle-like plates at or near grain boundaries.
 
 Respond with ONLY a JSON object:
 {{"primary_microconstituent": "<spheroidite|network|spheroidite+widmanstatten|pearlite+spheroidite|pearlite|pearlite+widmanstatten>"}}"""
@@ -52,14 +52,14 @@ def make_prompt_fs_ref() -> str:
     return """First image: a 3×2 reference grid showing one example of each of the 6 UHCS microstructure classes.
 
 TOP ROW (left to right):
-  (1) SPHEROIDITE — Scattered dark round/oval cementite particles on a light ferrite matrix. The particles are isolated, roughly spherical, and uniformly distributed. Looks like "polka dots." This forms from prolonged annealing below the eutectoid temperature.
-  (2) NETWORK — Dark continuous lines forming a connected web/mesh pattern. These are cementite films along prior austenite grain boundaries. The lines outline polygonal grain shapes. Forms during slow cooling from above A1.
-  (3) SPHEROIDITE + WIDMANSTATTEN — A mix of round spheroidized particles AND straight elongated needle/plate-like features growing inward from grain boundaries. You see both "dots" and "needles" in the same image. Indicates partial spheroidization of Widmanstatten cementite.
+  (1) spheroidite — Scattered dark round/oval cementite particles on a light ferrite matrix. The particles are isolated, roughly spherical, and uniformly distributed. Looks like "polka dots." This forms from prolonged annealing below the eutectoid temperature.
+  (2) network — Dark continuous lines forming a connected web/mesh pattern. These are cementite films along prior austenite grain boundaries. The lines outline polygonal grain shapes. Forms during slow cooling from above A1.
+  (3) spheroidite+widmanstatten — A mix of round spheroidized particles AND straight elongated needle/plate-like features growing inward from grain boundaries. You see both "dots" and "needles" in the same image. Indicates partial spheroidization of Widmanstatten cementite.
 
 BOTTOM ROW (left to right):
-  (4) PEARLITE + SPHEROIDITE — Regions showing fingerprint-like lamellar striations (pearlite) alongside areas with scattered round particles (spheroidite). Two distinct textures coexist. Indicates incomplete spheroidization of pearlite.
-  (5) PEARLITE — Fine parallel alternating dark/light lamellae creating a fingerprint or wood-grain pattern. Very regular, closely-spaced striations. Requires high magnification to resolve individual lamellae.
-  (6) PEARLITE + WIDMANSTATTEN — Lamellar pearlite colonies (fingerprint texture) in grain interiors combined with long straight needle-like plates at or near grain boundaries.
+  (4) pearlite+spheroidite — Regions showing fingerprint-like lamellar striations (pearlite) alongside areas with scattered round particles (spheroidite). Two distinct textures coexist. Indicates incomplete spheroidization of pearlite.
+  (5) pearlite — Fine parallel alternating dark/light lamellae creating a fingerprint or wood-grain pattern. Very regular, closely-spaced striations. Requires high magnification to resolve individual lamellae.
+  (6) pearlite+widmanstatten — Lamellar pearlite colonies (fingerprint texture) in grain interiors combined with long straight needle-like plates at or near grain boundaries.
 
 Study the differences in pattern geometry: dots vs lines vs needles vs lamellae."""
 

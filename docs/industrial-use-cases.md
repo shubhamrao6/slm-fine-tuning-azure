@@ -42,6 +42,13 @@ Each use case follows the same pattern: domain-specific visual classification wh
 - Well-established benchmark — easy to compare
 - Small images (200×200) — no VRAM issues
 
+**Benchmark Results (360 test images):**
+- Qwen2.5-VL-3B base: 21.7% ZS / 22.8% FS (near random chance of 16.7%)
+- GPT-4.1: 46.9% ZS / 91.1% FS (best frontier — SEAL teacher)
+- GPT-5: 45.8% ZS / 86.4% FS
+- Few-shot reference image is critical (GPT-4.1: 47% → 91% with reference grid)
+- Hardest classes: inclusion (2% ZS) and rolled-in_scale (0% ZS) — visually similar
+
 **NEW: Steel-VL Dataset (2025)**
 
 | Property | Value |
@@ -145,6 +152,13 @@ Each use case follows the same pattern: domain-specific visual classification wh
 - Microscopy images are very different from macro photos — tests VLM on a new modality
 - High industrial value: microstructure determines mechanical properties
 - The CoT descriptions would include metallurgical reasoning ("this lamellar structure indicates pearlite formed during slow cooling...")
+
+**Benchmark Results (120 test images, 6 classes from UHCS/NIST):**
+- Qwen2.5-VL-3B base: 60.8% ZS / 42.5% FS (ZS inflated by spheroidite majority class bias)
+- GPT-4.1: 46.7% ZS / 71.7% FS
+- GPT-5: 61.7% ZS / 80.0% FS (best frontier — SEAL teacher for this task)
+- Hardest task so far — even GPT-5 FS only 80%. Strong CoT distillation candidate.
+- Compound classes (spheroidite+widmanstatten) go from 0% → 93% with few-shot reference
 
 ---
 
