@@ -13,6 +13,36 @@ Benchmark Qwen2.5-VL-3B and frontier models (GPT-4.1, GPT-5) on 4-class weld def
 | Benchmark subset | 240 test images (60 per class, stratified sample) |
 | Download | [GitHub](https://github.com/RIAWELC/RIAWELC) |
 
+## Benchmark Results (240 test images)
+
+| Method | Accuracy | JSON Valid | Time/img |
+|--------|----------|-----------|----------|
+| Qwen2.5-VL-3B (ZS) | 30.8% | 100% | 2.0s |
+| Qwen2.5-VL-3B (FS) | 51.2% | 100% | 2.9s |
+| GPT-4.1 (ZS, t=0.7) | 57.5% | 97% | 2.0s |
+| GPT-4.1 (FS, t=0.7) | 65.0% | 100% | 3.0s |
+| GPT-5 (ZS, t=1) | 62.5% | 100% | 5.6s |
+| GPT-5 (FS, t=1) | 62.5% | 100% | 8.0s |
+| Random chance | 25.0% | — | — |
+
+### Per-Class Accuracy
+
+| Class | Qwen ZS | Qwen FS | GPT-4.1 ZS | GPT-4.1 FS | GPT-5 ZS | GPT-5 FS |
+|-------|---------|---------|------------|------------|----------|----------|
+| lack_of_penetration | 15% | 42% | 62% | 38% | 72% | 60% |
+| porosity | 13% | 77% | 72% | 92% | 78% | 90% |
+| cracks | 2% | 3% | 0% | 30% | 0% | 0% |
+| no_defect | 93% | 83% | 97% | 100% | 100% | 100% |
+
+### Key Findings
+
+- Cracks is catastrophically hard — 0% for all models zero-shot, only GPT-4.1 FS reaches 30%
+- No_defect is trivially easy (83-100%) — uniform radiographs are distinctive
+- Porosity responds well to few-shot (Qwen: 13% → 77%, GPT-4.1: 72% → 92%)
+- GPT-4.1 FS (65.0%) is the best practical choice — GPT-5 FS ties at 62.5% but is 2.7× slower and scores 0% on cracks
+- X-ray radiographs are a fundamentally different modality — all models struggle more than on surface photos
+- GPT-4.1 will be used as SEAL teacher (faster, only model that can detect cracks at all)
+
 ## Classes
 
 | Class | Train | Test (full) | Test (sampled) | Description |

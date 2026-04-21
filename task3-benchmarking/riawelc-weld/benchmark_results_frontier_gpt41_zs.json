@@ -1,0 +1,2635 @@
+{
+  "model": "gpt-4.1",
+  "mode": "gpt41_zs",
+  "dataset": "RIAWELC",
+  "total_images": 240,
+  "accuracy_pct": 57.5,
+  "json_validity_pct": 96.7,
+  "avg_inference_time_s": 1.97,
+  "results": [
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-30R_Img1_A80_S1_[7][4].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.44
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-102R_Img1_A80_S2_[6][24].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.07
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img1_A80_S6_[1][13].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.27
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-29R_Img1_A80_S2_[1][44].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.19
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[10][158].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.12
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-31R_Img1_A80_S1_[9][27].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.12
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img2_A80_S1_[13][7].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.46
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-107R_Img1_A80_S3_[8][11].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.86
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img1_A80_S5_[12][24].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.27
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-40R_Img1_A80_S4_[17][17].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.37
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img4_A80_S6_[5][7].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.04
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img2_A80_S4_[24][14].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.17
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img4_A80_S2_[39][22].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.52
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-42R_Img2_A80_S1_[6][18].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.74
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-29R_Img4_A80_S4_[14][62].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.04
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-28R_Img3_A80_S3_[8][33].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-90R_Img1_A80_S1_[6][37].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.5
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-97R_Img1_A80_S2_[3][6].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.6
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-107R_Img3_A80_S4_[11][20].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.09
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-90R_Img1_A80_S2_[9][26].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.39
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img4_A80_S4_[12][21].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.43
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-94R_Img3_A80_S3_[9][26].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.4
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-23R_Img4_A80_S1_[22][26].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 0.76
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-12R_Img3_A80_S2_[3][71].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.11
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img2_A80_S4_[12][54].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.41
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img1_A80_S4_[14][87].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img2_A80_S4_[9][32].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-40R_Img4_A80_S3_[11][21].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.23
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[9][108].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.53
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-98R_Img2_A80_S1_[6][12].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.79
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-40R_Img1_A80_S1_[3][22].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.69
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img4_A80_S1_[8][26].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.49
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-105R_Img3_A80_S1_[11][36].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.37
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-31R_Img1_A80_S1_[17][28].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.29
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img4_A80_S1_[8][190].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.17
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img3_A80_S10_[6][2].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.01
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-94R_Img1_A80_S3_[4][24].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.24
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[5][117].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.06
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img1_A80_S3_[8][60].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.33
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-23R_Img4_A80_S2_[11][6].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.3
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-26R_Img4_A80_S5_[11][68].png",
+      "class": "porosity",
+      "predicted": null,
+      "raw": "ERROR: Error code: 400 - {'error': {'message': '{\"error\": {\"message\": \"The model was unable to complete inference due to an internal error.\"}}', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'invalid_prompt'}}",
+      "correct": false,
+      "valid_json": false,
+      "time_s": 0.79
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-107R_Img4_A80_S5_[7][109].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.43
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img1_A80_S4_[20][25].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 0.9
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-88R_Img1_A80_S3_[25][33].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.31
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-107R_Img1_A80_S3_[7][12].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 3.2
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-31R_Img2_A80_S1_[9][10].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.96
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/bam5_Img3_A80_S3_[5][13].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.31
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-30R_Img3_A80_S1_[4][15].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.66
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-27R_Img4_A80_S6_[2][26].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.57
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img3_A80_S5_[3][17].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.34
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img3_A80_S3_[12][3].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.7
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-40R_Img1_A80_S4_[12][3].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.09
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-90R_Img4_A80_S2_[7][17].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.01
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img2_A80_S1_[11][78].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.59
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img4_A80_S3_[4][7].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.64
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/bam5_Img2_A80_S7_[11][26].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.57
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-88R_Img3_A80_S2_[6][7].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.14
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img2_A80_S4_[38][25].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.31
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-88R_Img1_A80_S1_[39][5].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img4_A80_S2_[5][12].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.72
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img2_A80_S5_[6][26].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.17
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-94R_Img1_A80_S1_[11][17].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.96
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img3_A80_S1_[4][61].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.3
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img3_A80_S1_[4][86].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.71
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-42R_Img4_A80_S1_[7][39].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.88
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-22R_Img1_A80_S6_[1][23].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.08
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-13R_Img1_A80_S5_[6][24].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.06
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-105R_Img4_A80_S1_[4][25].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 0.93
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-99R_Img1_A80_S1_[1][17].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.27
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[10][150].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.06
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img1_A80_S3_[13][1].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.13
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-12R_Img1_A80_S2_[3][21].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.11
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img3_A80_S4_[12][76].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.42
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-101R_Img4_A80_S6_[33][1].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.36
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-99R_Img1_A80_S1_[6][12].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.94
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-101R_Img4_A80_S1_[9][9].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.75
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-26R_Img1_A80_S3_[1][76].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.06
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-94R_Img1_A80_S1_[5][39].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.49
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img4_A80_S3_[10][45].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[9][77].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.99
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[3][113].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.34
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/bam5_Img2_A80_S5_[3][10].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.89
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img3_A80_S5_[13][34].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.08
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img1_A80_S4_[21][3].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.35
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-12R_Img1_A80_S2_[4][172].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.69
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-26R_Img4_A80_S6_[9][12].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.05
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-26R_Img4_A80_S3_[16][25].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.25
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-42R_Img4_A80_S3_[3][5].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.3
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-88R_Img4_A80_S3_[27][33].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.4
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-26R_Img4_A80_S6_[9][71].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.23
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-105R_Img3_A80_S1_[8][38].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.5
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img4_A80_S4_[10][5].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.56
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-28R_Img3_A80_S6_[6][13].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img4_A80_S3_[10][49].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.09
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-101R_Img2_A80_S2_[23][8].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "{\"defect_class\": \"cracks\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.58
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img4_A80_S1_[8][110].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.32
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-28R_Img3_A80_S6_[1][1].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.72
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-28R_Img3_A80_S7_[1][24].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.69
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-40R_Img1_A80_S1_[15][12].png",
+      "class": "no_defect",
+      "predicted": null,
+      "raw": "ERROR: Error code: 400 - {'error': {'message': '{\"error\": {\"message\": \"The model was unable to complete inference due to an internal error.\"}}', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'invalid_prompt'}}",
+      "correct": false,
+      "valid_json": false,
+      "time_s": 0.73
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-20R_Img1_A80_S5_[13][86].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.35
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-90R_Img3_A80_S3_[4][12].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.09
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img3_A80_S3_[9][46].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.15
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-31R_Img1_A80_S3_[4][10].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.43
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img4_A80_S4_[8][48].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.77
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-94R_Img1_A80_S1_[6][32].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.05
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-28R_Img4_A80_S7_[1][12].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.33
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-29R_Img1_A80_S2_[3][33].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.25
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img2_A80_S3_[21][33].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.32
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img1_A80_S3_[10][11].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.93
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[1][183].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.26
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-22R_Img4_A80_S2_[3][42].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.95
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img4_A80_S4_[10][66].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.67
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-12R_Img1_A80_S2_[5][174].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.03
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img1_A80_S5_[16][20].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.06
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-12R_Img1_A80_S1_[8][34].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.13
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img2_A80_S3_[6][2].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.11
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-13R_Img3_A80_S6_[8][41].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.44
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-22R_Img3_A80_S2_[2][32].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.1
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img4_A80_S2_[8][46].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.24
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img4_A80_S2_[11][29].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.34
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img2_A80_S6_[8][63].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.95
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-88R_Img2_A80_S5_[20][16].png",
+      "class": "lack_of_penetration",
+      "predicted": null,
+      "raw": "ERROR: Error code: 400 - {'error': {'message': '{\"error\": {\"message\": \"The model was unable to complete inference due to an internal error.\"}}', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'invalid_prompt'}}",
+      "correct": false,
+      "valid_json": false,
+      "time_s": 1.02
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-94R_Img1_A80_S3_[12][43].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.06
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img4_A80_S5_[35][16].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.2
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img3_A80_S5_[2][8].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.1
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-30R_Img1_A80_S1_[3][55].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.43
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-12R_Img3_A80_S1_[5][26].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.31
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-42R_Img2_A80_S1_[7][3].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.2
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img4_A80_S8_[3][20].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 96.08
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img1_A80_S3_[8][9].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.15
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img3_A80_S1_[4][45].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.13
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img4_A80_S3_[12][2].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 0.98
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S1_[13][36].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.42
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-30R_Img1_A80_S3_[17][24].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.13
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-101R_Img3_A80_S4_[13][4].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.5
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-105R_Img3_A80_S1_[11][41].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.11
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-42R_Img4_A80_S1_[6][1].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.11
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-42R_Img2_A80_S3_[2][15].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.01
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-26R_Img4_A80_S3_[14][67].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.97
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-22R_Img1_A80_S6_[3][16].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.15
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-40R_Img3_A80_S4_[11][32].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.97
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[9][50].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.36
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-26R_Img2_A80_S6_[15][4].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.39
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img3_A80_S3_[6][22].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.24
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img1_A80_S3_[14][1].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.13
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-12R_Img2_A80_S1_[3][32].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.99
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img2_A80_S4_[4][14].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.19
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img4_A80_S4_[10][12].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.94
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img2_A80_S2_[13][2].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 0.92
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-90R_Img2_A80_S3_[5][12].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.29
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-28R_Img1_A80_S6_[2][2].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.06
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/bam5_Img3_A80_S2_[3][18].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.76
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img3_A80_S4_[41][50].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "{\"defect_class\": \"cracks\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.32
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/bam5_Img4_A80_S7_[9][9].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.66
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img1_A80_S2_[8][84].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.4
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img4_A80_S1_[3][112].png",
+      "class": "no_defect",
+      "predicted": null,
+      "raw": "ERROR: Error code: 400 - {'error': {'message': '{\"error\": {\"message\": \"The model was unable to complete inference due to an internal error.\"}}', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'invalid_prompt'}}",
+      "correct": false,
+      "valid_json": false,
+      "time_s": 0.79
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-90R_Img2_A80_S1_[4][11].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.99
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img3_A80_S5_[13][19].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.51
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img4_A80_S1_[8][62].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.45
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-39R_Img1_A80_S2_[17][12].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.04
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img2_A80_S9_[3][1].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.41
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img2_A80_S3_[9][5].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.25
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-101R_Img3_A80_S4_[31][3].png",
+      "class": "lack_of_penetration",
+      "predicted": null,
+      "raw": "ERROR: Error code: 400 - {'error': {'message': '{\"error\": {\"message\": \"The model was unable to complete inference due to an internal error.\"}}', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'invalid_prompt'}}",
+      "correct": false,
+      "valid_json": false,
+      "time_s": 0.69
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img4_A80_S5_[12][68].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.96
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img4_A80_S1_[4][20].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.36
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img2_A80_S4_[3][9].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.63
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-107R_Img2_A80_S5_[6][108].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.15
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-23R_Img4_A80_S1_[12][13].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.17
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img4_A80_S5_[6][24].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.14
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img4_A80_S3_[3][23].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.86
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/bam5_Img4_A80_S7_[10][18].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img2_A80_S6_[8][21].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.35
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img4_A80_S1_[7][117].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.51
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-40R_Img1_A80_S4_[5][48].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.12
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-22R_Img4_A80_S4_[5][28].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.16
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-88R_Img1_A80_S5_[6][15].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.19
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[8][115].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.71
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img3_A80_S4_[10][81].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.94
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img1_A80_S4_[24][15].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.45
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-94R_Img4_A80_S3_[5][47].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.27
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-31R_Img4_A80_S3_[9][19].png",
+      "class": "porosity",
+      "predicted": null,
+      "raw": "ERROR: Error code: 400 - {'error': {'message': '{\"error\": {\"message\": \"The model was unable to complete inference due to an internal error.\"}}', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'invalid_prompt'}}",
+      "correct": false,
+      "valid_json": false,
+      "time_s": 1.08
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-42R_Img1_A80_S6_[7][10].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.02
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img3_A80_S4_[18][1].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.53
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img1_A80_S1_[2][126].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.13
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img4_A80_S1_[8][41].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.53
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img4_A80_S3_[6][35].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.27
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img4_A80_S6_[4][3].png",
+      "class": "cracks",
+      "predicted": null,
+      "raw": "ERROR: Error code: 400 - {'error': {'message': '{\"error\": {\"message\": \"The model was unable to complete inference due to an internal error.\"}}', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'invalid_prompt'}}",
+      "correct": false,
+      "valid_json": false,
+      "time_s": 0.82
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-26R_Img4_A80_S1_[14][24].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 3.04
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img4_A80_S1_[7][9].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.98
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-22R_Img3_A80_S6_[9][35].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.03
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-13R_Img2_A80_S6_[6][41].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.2
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-26R_Img4_A80_S7_[9][40].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.34
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-31R_Img1_A80_S1_[9][10].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.19
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img3_A80_S1_[40][77].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.36
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-26R_Img4_A80_S3_[15][60].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.12
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-39R_Img1_A80_S4_[5][3].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.66
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-39R_Img1_A80_S5_[19][41].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.87
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img2_A80_S4_[5][50].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.31
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-102R_Img4_A80_S8_[27][8].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "{\"defect_class\": \"cracks\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img3_A80_S3_[9][77].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.25
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img4_A80_S2_[6][77].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.21
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-13R_Img4_A80_S7_[3][39].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.3
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-30R_Img3_A80_S1_[4][59].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.29
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-98R_Img1_A80_S1_[4][18].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.18
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-40R_Img1_A80_S4_[1][3].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.13
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-101R_Img3_A80_S4_[19][3].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "{\"defect_class\": \"cracks\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.04
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/bam5_Img2_A80_S5_[3][13].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "{\"defect_class\": \"cracks\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.22
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img1_A80_S1_[6][75].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.94
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img2_A80_S8_[3][13].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.58
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-94R_Img4_A80_S2_[7][20].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.94
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-15R_Img1_A80_S1_[1][50].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.23
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-20R_Img3_A80_S4_[11][73].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.95
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-40R_Img1_A80_S3_[15][5].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-98R_Img2_A80_S1_[5][8].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.87
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img3_A80_S5_[12][3].png",
+      "class": "lack_of_penetration",
+      "predicted": null,
+      "raw": "ERROR: Error code: 400 - {'error': {'message': '{\"error\": {\"message\": \"The model was unable to complete inference due to an internal error.\"}}', 'type': 'invalid_request_error', 'param': 'prompt', 'code': 'invalid_prompt'}}",
+      "correct": false,
+      "valid_json": false,
+      "time_s": 0.73
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-26R_Img1_A80_S3_[3][90].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.97
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-40R_Img3_A80_S2_[1][64] - Copia.png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.19
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img4_A80_S4_[23][43].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.96
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img2_A80_S1_[20][74].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "{\"defect_class\": \"cracks\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.78
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-90R_Img1_A80_S2_[5][29].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.85
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img1_A80_S5_[17][22].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img2_A80_S4_[6][33].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "{\"defect_class\": \"cracks\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.19
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img2_A80_S1_[3][12].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.08
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-102R_Img1_A80_S4_[16][10].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.31
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img4_A80_S4_[43][51].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.6
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-107R_Img4_A80_S4_[9][30].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.13
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-99R_Img3_A80_S2_[9][27].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.97
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S1_[5][42].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.89
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-40R_Img1_A80_S2_[16][92].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.19
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-28R_Img4_A80_S2_[6][2].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "porosity"
+      },
+      "raw": "{\"defect_class\": \"porosity\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.37
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-39R_Img1_A80_S5_[3][47].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.0
+    },
+    {
+      "image": "../../datasets/riawelc/testing/porosity/RRT-39R_Img4_A80_S4_[5][27].png",
+      "class": "porosity",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.49
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-40R_Img4_A80_S3_[7][5].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.15
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-13R_Img3_A80_S3_[8][81].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.36
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-28R_Img3_A80_S3_[5][16].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 0.85
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-24R_Img2_A80_S1_[4][42].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 0.88
+    },
+    {
+      "image": "../../datasets/riawelc/testing/cracks/RRT-27R_Img4_A80_S6_[3][16].png",
+      "class": "cracks",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.18
+    },
+    {
+      "image": "../../datasets/riawelc/testing/lack_of_penetration/RRT-105R_Img1_A80_S1_[9][37].png",
+      "class": "lack_of_penetration",
+      "predicted": {
+        "defect_class": "lack_of_penetration"
+      },
+      "raw": "{\"defect_class\": \"lack_of_penetration\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.99
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-12R_Img1_A80_S2_[1][74].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.62
+    },
+    {
+      "image": "../../datasets/riawelc/testing/no_defect/RRT-102R_Img1_A80_S6_[20][22].png",
+      "class": "no_defect",
+      "predicted": {
+        "defect_class": "no_defect"
+      },
+      "raw": "{\"defect_class\": \"no_defect\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 0.83
+    }
+  ]
+}

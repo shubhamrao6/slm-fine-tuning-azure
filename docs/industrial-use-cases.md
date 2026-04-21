@@ -91,6 +91,13 @@ Each use case follows the same pattern: domain-specific visual classification wh
 - Expert knowledge needed: what each defect looks like in radiography, acceptance criteria (AWS D1.1)
 - Multiple established benchmarks to compare against
 
+**Benchmark Results (240 test images, 4 classes from RIAWELC):**
+- Qwen2.5-VL-3B base: 30.8% ZS / 51.2% FS (random chance = 25%)
+- GPT-4.1: 57.5% ZS / 65.0% FS (best practical choice — only model detecting cracks)
+- GPT-5: 62.5% ZS / 62.5% FS (faster ZS but 0% on cracks even with few-shot)
+- Cracks class is catastrophically hard: 0% for all models ZS, only GPT-4.1 FS reaches 30%
+- GPT-4.1 used as SEAL teacher (faster, and the only model that can detect cracks at all)
+
 ---
 
 ## Use Case 4: Rail Surface Defect Detection
