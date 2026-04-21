@@ -1,0 +1,3971 @@
+{
+  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "mode": "zero-shot",
+  "dataset": "NEU-CLS",
+  "total_images": 360,
+  "accuracy_pct": 21.7,
+  "json_validity_pct": 100.0,
+  "avg_inference_time_s": 1.91,
+  "results": [
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_241.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.53
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_242.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.28
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_243.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.49
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_244.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.51
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_245.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.33
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_246.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.29
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_247.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.96
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_248.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\n  \"defect_class\": \"patches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_249.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.4
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_250.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_251.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.79
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_252.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.72
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_253.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "{\n  \"defect_class\": \"crazing\"\n}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.05
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_254.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"pitted_surface\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.32
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_255.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.64
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_256.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_257.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "{\"defect_class\": \"pitted_surface\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.8
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_258.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.95
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_259.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.09
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_260.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_261.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.13
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_262.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.64
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_263.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.26
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_264.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.0
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_265.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.45
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_266.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n    \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.31
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_267.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.87
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_268.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.26
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_269.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.97
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_270.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "{\"defect_class\": \"crazing\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.87
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_271.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.76
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_272.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_273.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_274.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.24
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_275.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.72
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_276.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\"defect_class\": \"crazing\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_277.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_278.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_279.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.94
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_280.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.72
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_281.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.86
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_282.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "rolled-in_scale"
+      },
+      "raw": "{\"defect_class\": \"rolled-in_scale\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.69
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_283.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.58
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_284.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.6
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_285.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.42
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_286.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.35
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_287.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "{\n  \"defect_class\": \"crazing\"\n}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_288.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.94
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_289.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\"defect_class\": \"crazing\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.0
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_290.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.17
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_291.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_292.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"pitted_surface\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.27
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_293.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.58
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_294.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_295.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "{\"defect_class\": \"crazing\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.66
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_296.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_297.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_298.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.96
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_299.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/crazing/crazing_300.jpg",
+      "class": "crazing",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_241.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_242.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.47
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_243.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_244.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_245.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.17
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_246.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_247.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_248.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_249.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_250.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n    \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_251.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.47
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_252.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_253.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_254.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_255.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_256.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_257.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_258.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.94
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_259.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.1
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_260.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.95
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_261.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_262.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_263.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_264.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_265.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.58
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_266.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_267.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.2
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_268.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_269.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.17
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_270.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_271.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "rolls_in_scale"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"rolls_in_scale\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.24
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_272.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_273.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_274.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_275.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.48
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_276.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_277.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_278.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\n  \"defect_class\": \"patches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.74
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_279.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_280.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_281.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_282.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_283.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.19
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_284.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_285.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_286.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.84
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_287.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.58
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_288.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_289.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_290.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_291.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_292.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.58
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_293.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_294.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_295.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.17
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_296.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_297.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "{\"defect_class\": \"cracks\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_298.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.17
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_299.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/inclusion/inclusion_300.jpg",
+      "class": "inclusion",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_241.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_242.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.47
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_243.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_244.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.48
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_245.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_246.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.48
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_247.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_248.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_249.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "```json\n{\"defect_class\": \"pitted_surface\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.98
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_250.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_251.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.49
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_252.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_253.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_254.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_255.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_256.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_257.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_258.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.8
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_259.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\n  \"defect_class\": \"patches\"\n}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.74
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_260.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.8
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_261.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_262.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_263.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_264.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_265.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_266.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_267.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_268.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_269.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.19
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_270.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.49
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_271.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_272.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.58
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_273.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_274.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_275.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_276.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_277.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_278.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_279.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_280.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_281.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.19
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_282.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_283.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_284.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_285.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.28
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_286.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_287.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "{\n  \"defect_class\": \"crazing\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_288.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\"defect_class\": \"crazing\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.0
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_289.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.83
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_290.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_291.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_292.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_293.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_294.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_295.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_296.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_297.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "{\"defect_class\": \"pitted_surface\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.64
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_298.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_299.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/patches/patches_300.jpg",
+      "class": "patches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.59
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_241.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_242.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_243.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_244.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_245.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_246.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_247.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_248.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_249.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_250.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_251.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_252.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_253.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_254.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "```json\n{\"defect_class\": \"pitted_surface\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.01
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_255.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_256.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_257.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\"defect_class\": \"crazing\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.98
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_258.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.47
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_259.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_260.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_261.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "{\n  \"defect_class\": \"pitted_surface\"\n}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_262.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.58
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_263.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_264.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_265.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_266.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_267.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_268.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_269.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_270.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\n  \"defect_class\": \"patches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.77
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_271.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.84
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_272.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_273.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_274.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.24
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_275.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.8
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_276.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_277.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_278.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_279.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.11
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_280.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\n  \"defect_class\": \"patches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.74
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_281.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.59
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_282.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.46
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_283.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.59
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_284.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.24
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_285.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.48
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_286.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patched"
+      },
+      "raw": "{\n  \"defect_class\": \"patched\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.87
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_287.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_288.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "{\"defect_class\": \"crazing\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.64
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_289.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.08
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_290.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_291.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.26
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_292.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_293.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.08
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_294.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.13
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_295.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.07
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_296.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_297.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_298.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.08
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_299.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/pitted_surface/pitted_surface_300.jpg",
+      "class": "pitted_surface",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_241.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\"defect_class\": \"patches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.46
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_242.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\n  \"defect_class\": \"patches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.74
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_243.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_244.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_245.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"pitted_surface\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.24
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_246.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_247.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_248.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_249.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_250.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_251.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_252.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.85
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_253.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_254.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.17
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_255.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_256.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.26
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_257.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_258.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.1
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_259.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.11
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_260.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.07
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_261.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "rolled-in_scale"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"rolled-in_scale\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.25
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_262.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.54
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_263.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_264.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_265.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.13
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_266.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_267.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_268.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_269.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_270.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"crazing\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.25
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_271.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_272.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.57
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_273.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_274.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_275.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "{\n  \"defect_class\": \"pitted_surface\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_276.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "incorrigible"
+      },
+      "raw": "```json\n{\"defect_class\": \"incorrigible\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.1
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_277.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.21
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_278.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "cleanness"
+      },
+      "raw": "```json\n{\"defect_class\": \"cleanness\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_279.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "{\n  \"defect_class\": \"patches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.71
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_280.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_281.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_282.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_283.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_284.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_285.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "```json\n{\"defect_class\": \"cracks\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.95
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_286.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.54
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_287.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_288.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_289.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.8
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_290.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.86
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_291.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_292.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_293.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_294.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.09
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_295.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_296.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_297.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_298.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.8
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_299.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/rolled-in_scale/rolled-in_scale_300.jpg",
+      "class": "rolled-in_scale",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.94
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_241.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.93
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_242.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_243.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.79
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_244.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_245.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_246.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "{\"defect_class\": \"crazing\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.62
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_247.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_248.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_249.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "rolled-in_scale"
+      },
+      "raw": "```json\n{\"defect_class\": \"rolled-in_scale\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.0
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_250.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_251.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\"defect_class\": \"patches\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.81
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_252.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_253.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_254.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_255.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.55
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_256.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.18
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_257.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_258.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.56
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_259.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.54
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_260.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_261.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "cracks"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"cracks\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_262.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_263.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.14
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_264.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_265.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.17
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_266.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.19
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_267.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_268.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.87
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_269.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "rolled-in_scale"
+      },
+      "raw": "```json\n{\"defect_class\": \"rolled-in_scale\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.97
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_270.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_271.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_272.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "{\"defect_class\": \"pitted_surface\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.64
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_273.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.91
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_274.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_275.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\n  \"defect_class\": \"inclusion\"\n}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.8
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_276.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_277.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_278.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_279.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.87
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_280.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "crazing"
+      },
+      "raw": "```json\n{\"defect_class\": \"crazing\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.98
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_281.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "pitted_surface"
+      },
+      "raw": "```json\n{\"defect_class\": \"pitted_surface\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.98
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_282.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_283.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.11
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_284.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\n  \"defect_class\": \"scratches\"\n}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.82
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_285.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_286.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_287.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_288.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "{\"defect_class\": \"scratches\"}",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.53
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_289.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_290.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "rolled-in_scale"
+      },
+      "raw": "```json\n{\"defect_class\": \"rolled-in_scale\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.0
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_291.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_292.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.9
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_293.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\"defect_class\": \"inclusion\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.92
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_294.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.88
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_295.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "rolled-in_scale"
+      },
+      "raw": "```json\n{\"defect_class\": \"rolled-in_scale\"}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.0
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_296.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "{\"defect_class\": \"inclusion\"}",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 1.54
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_297.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "patches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"patches\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.06
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_298.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\"defect_class\": \"scratches\"}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 1.89
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_299.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "scratches"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"scratches\"\n}\n```",
+      "correct": true,
+      "valid_json": true,
+      "time_s": 2.15
+    },
+    {
+      "image": "../../datasets/neu-cls/NEU-DET/validation/images/scratches/scratches_300.jpg",
+      "class": "scratches",
+      "predicted": {
+        "defect_class": "inclusion"
+      },
+      "raw": "```json\n{\n  \"defect_class\": \"inclusion\"\n}\n```",
+      "correct": false,
+      "valid_json": true,
+      "time_s": 2.16
+    }
+  ]
+}

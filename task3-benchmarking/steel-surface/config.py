@@ -43,12 +43,12 @@ def make_prompt_zs() -> str:
 The image shows a 200×200 pixel grayscale photograph of a hot-rolled steel strip surface.
 
 Possible defect classes:
-1. CRAZING: network of fine surface cracks forming a web-like pattern
-2. INCLUSION: dark spots or streaks of foreign material embedded in the surface
-3. PATCHES: irregular lighter or darker areas, uneven texture regions
-4. PITTED_SURFACE: small holes or depressions scattered across the surface
-5. ROLLED-IN_SCALE: oxide scale pressed into surface during rolling, elongated marks parallel to rolling direction
-6. SCRATCHES: linear marks or grooves on the surface, directional damage
+1. crazing: a network of fine, shallow cracks spreading across the surface in a web-like or mosaic pattern. The cracks are thin, irregular, and multi-directional. Overall texture looks fragmented but the surface is relatively uniform in brightness.
+2. inclusion: dark, irregularly shaped spots or elongated streaks embedded in the steel surface. These are foreign material (slag, oxide) trapped during solidification. The background is darker and more uniform than other classes.
+3. patches: large irregular regions where the surface texture or brightness changes abruptly. You see distinct lighter or darker zones with soft, blotchy boundaries. The contrast between zones is high.
+4. pitted_surface: scattered small dark holes or shallow depressions across a lighter background. The pits are roughly circular and distributed somewhat randomly. The overall surface appears brighter than most other classes.
+5. rolled-in_scale: oxide scale that was pressed into the surface during the hot-rolling process. Appears as elongated dark marks, streaks, or patches aligned roughly parallel to the rolling direction. The marks have irregular edges.
+6. scratches: one or more linear grooves or marks on the surface, typically running in a consistent direction. The lines are sharper and more defined than crazing cracks, and usually fewer in number.
 
 Respond with ONLY a JSON object:
 {"defect_class": "<crazing|inclusion|patches|pitted_surface|rolled-in_scale|scratches>"}"""
@@ -59,14 +59,14 @@ def make_prompt_fs_ref() -> str:
     return """First image: a 2×3 reference grid showing one example of each of the 6 steel surface defect classes from the NEU dataset. The layout is:
 
 TOP ROW (left to right):
-  (a) CRAZING — a network of fine, shallow cracks spreading across the surface in a web-like or mosaic pattern. The cracks are thin, irregular, and multi-directional. Overall texture looks fragmented but the surface is relatively uniform in brightness.
-  (b) INCLUSION — dark, irregularly shaped spots or elongated streaks embedded in the steel surface. These are foreign material (slag, oxide) trapped during solidification. The background is darker and more uniform than other classes.
-  (c) PATCHES — large irregular regions where the surface texture or brightness changes abruptly. You see distinct lighter or darker zones with soft, blotchy boundaries. The contrast between zones is high.
+  (a) crazing — a network of fine, shallow cracks spreading across the surface in a web-like or mosaic pattern. The cracks are thin, irregular, and multi-directional. Overall texture looks fragmented but the surface is relatively uniform in brightness.
+  (b) inclusion — dark, irregularly shaped spots or elongated streaks embedded in the steel surface. These are foreign material (slag, oxide) trapped during solidification. The background is darker and more uniform than other classes.
+  (c) patches — large irregular regions where the surface texture or brightness changes abruptly. You see distinct lighter or darker zones with soft, blotchy boundaries. The contrast between zones is high.
 
 BOTTOM ROW (left to right):
-  (d) PITTED SURFACE — scattered small dark holes or shallow depressions across a lighter background. The pits are roughly circular and distributed somewhat randomly. The overall surface appears brighter than most other classes.
-  (e) ROLLED-IN SCALE — oxide scale that was pressed into the surface during the hot-rolling process. Appears as elongated dark marks, streaks, or patches aligned roughly parallel to the rolling direction. The marks have irregular edges.
-  (f) SCRATCHES — one or more linear grooves or marks on the surface, typically running in a consistent direction. The lines are sharper and more defined than crazing cracks, and usually fewer in number.
+  (d) pitted_surface — scattered small dark holes or shallow depressions across a lighter background. The pits are roughly circular and distributed somewhat randomly. The overall surface appears brighter than most other classes.
+  (e) rolled-in_scale — oxide scale that was pressed into the surface during the hot-rolling process. Appears as elongated dark marks, streaks, or patches aligned roughly parallel to the rolling direction. The marks have irregular edges.
+  (f) scratches — one or more linear grooves or marks on the surface, typically running in a consistent direction. The lines are sharper and more defined than crazing cracks, and usually fewer in number.
 
 Study the visual texture, pattern geometry, and brightness differences between each class carefully."""
 
