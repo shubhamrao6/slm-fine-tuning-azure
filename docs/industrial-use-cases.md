@@ -49,6 +49,12 @@ Each use case follows the same pattern: domain-specific visual classification wh
 - Few-shot reference image is critical (GPT-4.1: 47% → 91% with reference grid)
 - Hardest classes: inclusion (2% ZS) and rolled-in_scale (0% ZS) — visually similar
 
+**Fine-Tuning Results (Task 4, 30 training images):**
+- Direct LoRA: 63.1% (from 21.7% base — 3× improvement)
+- SEAL LoRA: 66.7% (winner — CoT distillation adds +3.6pp)
+- Both beat GPT-4.1 zero-shot (46.9%) with just 30 training images
+- Inclusion remains hardest (32%) — confused with scratches
+
 **NEW: Steel-VL Dataset (2025)**
 
 | Property | Value |

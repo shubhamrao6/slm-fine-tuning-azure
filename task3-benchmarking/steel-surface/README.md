@@ -45,6 +45,15 @@ Same methodology as granulometry: zero-shot, few-shot, and frontier model compar
 - Inclusion and rolled-in_scale are the hardest classes (visually similar elongated dark marks)
 - Qwen FS has a strong scratches bias (92%) — predicts scratches for almost everything
 
+## Fine-Tuning Results (Task 4)
+
+| Method | Accuracy | Training Data |
+|--------|----------|--------------|
+| Direct LoRA | 63.1% | 30 images (5/class) |
+| SEAL LoRA | 66.7% | 30 images → 120 augmented examples |
+
+SEAL LoRA achieves 3× improvement over base (22% → 67%) and beats GPT-4.1 zero-shot (47%).
+
 ## Defect Definitions
 
 | Class | Code | Visual Description |
