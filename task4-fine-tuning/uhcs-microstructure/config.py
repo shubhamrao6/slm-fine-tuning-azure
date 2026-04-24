@@ -17,16 +17,15 @@ TRAIN_MANIFEST = os.path.join(DATASET_ROOT, "train_manifest.json")
 # Model
 MODEL_ID = "Qwen/Qwen2.5-VL-3B-Instruct"
 SEED = 42
-IMAGES_PER_CLASS = 5  # 5 per class × 6 classes = 30 training images
+IMAGES_PER_CLASS = 6  # 6 per class × 5 classes = 30 training images
 
-# Classes (6 microconstituent labels)
+# Classes (5 microconstituent labels — pearlite+widmanstatten dropped, only 5 total images)
 CLASSES = [
     "spheroidite",
     "network",
     "spheroidite+widmanstatten",
     "pearlite+spheroidite",
     "pearlite",
-    "pearlite+widmanstatten",
 ]
 
 # LoRA
@@ -57,10 +56,9 @@ Possible microconstituent classes:
 3. spheroidite+widmanstatten: A mix of round spheroidized particles AND straight elongated needle/plate-like features growing inward from grain boundaries. You see both "dots" and "needles" in the same image. Indicates partial spheroidization of Widmanstatten cementite.
 4. pearlite+spheroidite: Regions showing fingerprint-like lamellar striations (pearlite) alongside areas with scattered round particles (spheroidite). Two distinct textures coexist. Indicates incomplete spheroidization of pearlite.
 5. pearlite: Fine parallel alternating dark/light lamellae creating a fingerprint or wood-grain pattern. Very regular, closely-spaced striations. Requires high magnification to resolve individual lamellae.
-6. pearlite+widmanstatten: Lamellar pearlite colonies (fingerprint texture) in grain interiors combined with long straight needle-like plates at or near grain boundaries.
 
 Respond with ONLY a JSON object:
-{{"primary_microconstituent": "<spheroidite|network|spheroidite+widmanstatten|pearlite+spheroidite|pearlite|pearlite+widmanstatten>"}}"""
+{{"primary_microconstituent": "<spheroidite|network|spheroidite+widmanstatten|pearlite+spheroidite|pearlite>"}}"""
 
 
 def make_seal_prompt(microconstituent: str, magnification: str = "unknown") -> str:
@@ -72,7 +70,6 @@ def make_seal_prompt(microconstituent: str, magnification: str = "unknown") -> s
         "spheroidite+widmanstatten": "A mix of round spheroidized particles AND straight elongated needle/plate-like features growing inward from grain boundaries. Both dots and needles visible. Indicates partial spheroidization of Widmanstatten cementite",
         "pearlite+spheroidite": "Regions showing fingerprint-like lamellar striations (pearlite) alongside areas with scattered round particles (spheroidite). Two distinct textures coexist. Indicates incomplete spheroidization of pearlite",
         "pearlite": "Fine parallel alternating dark/light lamellae creating a fingerprint or wood-grain pattern. Very regular, closely-spaced striations. Requires high magnification to resolve individual lamellae",
-        "pearlite+widmanstatten": "Lamellar pearlite colonies (fingerprint texture) in grain interiors combined with long straight needle-like plates at or near grain boundaries",
     }
     desc = class_descriptions.get(microconstituent, microconstituent)
 
@@ -83,7 +80,7 @@ Key distinguishing features between similar classes:
 - spheroidite vs network: spheroidite has ISOLATED round particles (dots), network has CONNECTED dark lines (web outlining grains)
 - spheroidite vs spheroidite+widmanstatten: pure spheroidite has ONLY round particles, spheroidite+widmanstatten also has straight NEEDLE/PLATE features from grain boundaries
 - pearlite vs pearlite+spheroidite: pure pearlite has ONLY lamellar striations (fingerprint), pearlite+spheroidite also has scattered round particles between lamellar regions
-- network vs pearlite+widmanstatten: network has connected lines outlining ALL grain boundaries, pearlite+widmanstatten has needles at boundaries PLUS lamellar colonies inside grains
+- spheroidite+widmanstatten vs pearlite+spheroidite: spheroidite+widmanstatten has dots+needles, pearlite+spheroidite has lamellae+dots — the key difference is NEEDLES vs LAMELLAE
 
 Explain WHY this classification is correct based on what you see:
 1. Describe the dominant visual pattern — what shapes and textures do you observe?
