@@ -1,6 +1,6 @@
 # Task 4: LoRA Fine-Tuning — UHCS Microstructure
 
-Fine-tune Qwen2.5-VL-3B on ~30 training images (5 per class, fewer for rare classes) to classify UHCS microconstituents into 6 classes. Same methodology as granulometry and steel surface.
+Fine-tune Qwen2.5-VL-3B on 30 training images (6 per class) to classify UHCS microconstituents into 5 classes. pearlite+widmanstatten dropped (only 5 total images in dataset).
 
 ## Baseline (Task 3)
 
@@ -11,27 +11,32 @@ Fine-tune Qwen2.5-VL-3B on ~30 training images (5 per class, fewer for rare clas
 | GPT-4.1 (FS, t=0.7) | 71.7% | SEAL teacher |
 | GPT-5 (FS, t=1) | 80.0% | Best frontier |
 
-## Dataset Notes
+## Results (117 test images, 5 classes)
 
-- Heavily imbalanced: spheroidite (372) vs pearlite+widmanstatten (5)
-- Training uses train_manifest.json (created by benchmarking notebook, ~478 images)
-- Rare classes (pearlite: 12 train, pearlite+widmanstatten: 2 train) will have fewer than 5 training images
-- Magnification varies (49x–19641x) and is included in the prompt
+| Method | Accuracy | Training Images | Training Examples | Epochs | LR |
+|--------|----------|----------------|-------------------|--------|-----|
+| Qwen base (ZS) | 60.8% | 0 | 0 | — | — |
+| Direct LoRA | 67.5% | 30 | 30 | 40 | 2e-5 |
+| **SEAL LoRA** | **68.4%** | 30 | 120 | 40 | 2e-5 |
+| GPT-4.1 (FS) | 71.7% | — | — | — | — |
 
-## Approach A: Direct LoRA
+### Per-Class Accuracy
 
-- ~30 images × 1 example = ~30 training pairs
-- Image + prompt (with magnification) → `{"primary_microconstituent": "..."}`
-- 40 epochs, lr=2e-5
+| Class | N | Base ZS | Direct | SEAL | GPT-4.1 FS |
+|-------|---|---------|--------|------|------------|
+| spheroidite | 74 | 73% | 74% | 72% | 62% |
+| network | 20 | 95% | 75% | 80% | 80% |
+| spheroidite+widmanstatten | 15 | 0% | 13% | 27% | 93% |
+| pearlite+spheroidite | 5 | 0% | 100% | 80% | 100% |
+| pearlite | 3 | 0% | 67% | 100% | 67% |
 
-## Approach B: SEAL-Augmented LoRA
+### Key Findings
 
-- ~30 images × 4 examples = ~120 training pairs
-- GPT-4.1 generates 3 CoT descriptions per image (answer-conditioned, t=0.7)
-- Plus 1 direct JSON per image
-- CoT examples use prompt WITHOUT "Respond with JSON" instruction (last 2 lines stripped)
-- Code appends correct JSON to GPT-4.1's description
-- 40 epochs, lr=2e-5
+- SEAL LoRA (68.4%) beats Direct (67.5%) and approaches GPT-4.1 FS (71.7%)
+- Both beat GPT-4.1 zero-shot (46.7%) with just 30 training images
+- Compound classes improved from 0% base to 27-100% after fine-tuning
+- spheroidite+widmanstatten remains hardest (27%) — requires detecting two co-existing features
+- pearlite+widmanstatten dropped due to insufficient data (5 total, 2 in train)
 
 ## Files
 

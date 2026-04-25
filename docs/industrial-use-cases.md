@@ -173,6 +173,12 @@ Each use case follows the same pattern: domain-specific visual classification wh
 - Hardest task so far — even GPT-5 FS only 80%. Strong CoT distillation candidate.
 - Compound classes (spheroidite+widmanstatten) go from 0% → 93% with few-shot reference
 
+**Fine-Tuning Results (Task 4, 30 training images, 5 classes):**
+- Direct LoRA: 67.5% (from 60.8% base)
+- SEAL LoRA: 68.4% (winner — approaches GPT-4.1 FS 71.7%)
+- Both beat GPT-4.1 zero-shot (46.7%) with just 30 images
+- pearlite+widmanstatten dropped (only 5 images in dataset)
+
 ---
 
 ## Summary: 5 Use Cases
