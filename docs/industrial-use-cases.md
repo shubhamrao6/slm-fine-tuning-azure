@@ -104,6 +104,12 @@ Each use case follows the same pattern: domain-specific visual classification wh
 - Cracks class is catastrophically hard: 0% for all models ZS, only GPT-4.1 FS reaches 30%
 - GPT-4.1 used as SEAL teacher (faster, and the only model that can detect cracks at all)
 
+**Fine-Tuning Results (Task 4, 24 training images):**
+- Direct LoRA: 73.3% (from 30.8% base — 2.4× improvement)
+- SEAL LoRA: 75.8% (winner — beats GPT-4.1 FS 65.0% by 10.8pp)
+- Both beat the frontier model — strongest result across all use cases
+- Cracks: from 0% (all models ZS) to 58% with just 6 training images
+
 ---
 
 ## Use Case 4: Rail Surface Defect Detection

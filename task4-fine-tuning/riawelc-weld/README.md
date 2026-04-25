@@ -9,23 +9,34 @@ Fine-tune Qwen2.5-VL-3B on 24 training images (6 per class) to classify weld def
 | Qwen2.5-VL-3B (ZS) | 30.8% | Near random (25%) |
 | Qwen2.5-VL-3B (FS) | 51.2% | |
 | GPT-4.1 (ZS, t=0.7) | 57.5% | |
-| GPT-4.1 (FS, t=0.7) | 65.0% | SEAL teacher (only model detecting cracks) |
-| GPT-5 (FS, t=1) | 62.5% | 0% on cracks even with few-shot |
+| GPT-4.1 (FS, t=0.7) | 65.0% | SEAL teacher |
 
-## Approach A: Direct LoRA
+## Results (240 test images)
 
-- 24 images (6 per class) × 1 example = 24 training pairs
-- Image + prompt → `{"defect_class": "..."}`
-- 40 epochs, lr=2e-5
+| Method | Accuracy | Training Images | Training Examples | Epochs | LR |
+|--------|----------|----------------|-------------------|--------|-----|
+| Qwen base (ZS) | 30.8% | 0 | 0 | — | — |
+| Direct LoRA | 73.3% | 24 | 24 | 40 | 2e-5 |
+| **SEAL LoRA** | **75.8%** | 24 | 96 | 40 | 2e-5 |
+| GPT-4.1 (FS) | 65.0% | — | — | — | — |
 
-## Approach B: SEAL-Augmented LoRA
+### Per-Class Accuracy
 
-- 24 images × 4 examples = 96 training pairs
-- GPT-4.1 generates 3 CoT descriptions per image (answer-conditioned, t=0.7)
-- Plus 1 direct JSON per image
-- CoT examples use prompt WITHOUT "Respond with JSON" instruction (last 2 lines stripped)
-- Code appends correct JSON to GPT-4.1's description
-- 40 epochs, lr=2e-5
+| Class | Base ZS | Direct | SEAL | GPT-4.1 FS |
+|-------|---------|--------|------|------------|
+| lack_of_penetration | 15% | 65% | 72% | 38% |
+| porosity | 13% | 83% | 83% | 92% |
+| cracks | 2% | 58% | 50% | 30% |
+| no_defect | 93% | 87% | 98% | 100% |
+
+### Key Findings
+
+- SEAL LoRA (75.8%) beats Direct (73.3%) and surpasses GPT-4.1 FS (65.0%) by 10.8pp
+- Both methods beat the frontier model — a 3B model trained on 24 images outperforms GPT-4.1 few-shot
+- Cracks: from 0% (all models zero-shot) to 58% (Direct) / 50% (SEAL) with just 6 training images
+- The 3B model detects cracks better than GPT-4.1 FS (30%) — strongest result across all use cases
+- Main confusion: cracks ↔ lack_of_penetration (both are dark lines in radiographs)
+- 2.5× improvement over base (30.8% → 75.8%)
 
 ## Files
 

@@ -67,6 +67,15 @@ Magnification is included in the prompt (like GSD in granulometry).
 - Pearlite classes have very few test samples (3-5) — results are noisy but directionally useful
 - This is the hardest task so far — even GPT-5 FS only reaches 80%, making it a strong candidate for CoT distillation improvement
 
+## Fine-Tuning Results (Task 4, 5 classes)
+
+| Method | Accuracy | Training Data |
+|--------|----------|--------------|
+| Direct LoRA | 67.5% | 30 images (6/class) |
+| SEAL LoRA | 68.4% | 30 images → 120 augmented examples |
+
+SEAL LoRA approaches GPT-4.1 FS (71.7%) with just 30 training images. pearlite+widmanstatten dropped (only 5 images).
+
 ## Files
 
 | File | Description |

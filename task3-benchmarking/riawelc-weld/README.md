@@ -52,6 +52,15 @@ Benchmark Qwen2.5-VL-3B and frontier models (GPT-4.1, GPT-5) on 4-class weld def
 | cracks | 2,893 | 446 | 60 | Dark sharp jagged lines — fractures in weld |
 | no_defect | 3,900 | 600 | 60 | Uniform gray — sound weld |
 
+## Fine-Tuning Results (Task 4)
+
+| Method | Accuracy | Training Data |
+|--------|----------|--------------|
+| Direct LoRA | 73.3% | 24 images (6/class) |
+| SEAL LoRA | 75.8% | 24 images → 96 augmented examples |
+
+Both beat GPT-4.1 FS (65.0%) — the fine-tuned 3B model outperforms the frontier model on X-ray radiographs.
+
 ## Files
 
 | File | Description |
