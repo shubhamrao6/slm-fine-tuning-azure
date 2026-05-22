@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Granulometry Direct",
+    "expected": 71.3,
+    "actual": 71.3,
+    "status": "MATCH"
+  },
+  {
+    "name": "Granulometry SEAL",
+    "expected": 79.6,
+    "actual": 79.6,
+    "status": "MATCH"
+  },
+  {
+    "name": "Steel Direct",
+    "expected": 63.1,
+    "actual": 63.1,
+    "status": "MATCH"
+  },
+  {
+    "name": "Steel SEAL",
+    "expected": 66.7,
+    "actual": 66.7,
+    "status": "MATCH"
+  },
+  {
+    "name": "UHCS Direct",
+    "expected": 67.5,
+    "actual": 65.8,
+    "status": "MISMATCH"
+  },
+  {
+    "name": "UHCS SEAL",
+    "expected": 68.4,
+    "actual": 66.7,
+    "status": "MISMATCH"
+  },
+  {
+    "name": "Weld Direct",
+    "expected": 73.3,
+    "actual": 73.3,
+    "status": "MATCH"
+  },
+  {
+    "name": "Weld SEAL",
+    "expected": 75.8,
+    "actual": 75.8,
+    "status": "MATCH"
+  }
+]

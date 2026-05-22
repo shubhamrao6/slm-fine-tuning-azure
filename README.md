@@ -48,6 +48,55 @@ az ml compute stop --name slm-edge-sim --resource-group CashAPI --workspace-name
 az ml compute start --name slm-workbench --resource-group CashAPI --workspace-name slm-workspace
 ```
 
+## GCP Resources (Active — migrated May 2026)
+
+Azure credits expired. Project migrated to GCP using Google for Startups credits ($25,000, expires May 2028).
+
+| Resource | Purpose | Cost |
+|----------|---------|------|
+| Project | `project-162f6734-044f-424a-9ad` | — |
+| Billing | GFS Cloud Program ($25,000) + Free Trial (₹28,283) | — |
+| GPU VM | `slm-workbench-l4` — g2-standard-12 (1× L4 24GB, 12 vCPU, 48GB RAM) | ~$1.00/hr |
+| Boot disk | 200 GB PD-SSD | ~$34/mo |
+| Data disk | 100 GB PD-SSD (workspace at `/home/jupyter/workspace/`) | ~$17/mo |
+| GCS bucket | `gs://slm-fine-tuning-transfer-4ffe5e` (30 GB zip backup) | ~$0.60/mo |
+| Region | asia-southeast1-b (Singapore) | — |
+| Auto-shutdown | 60 min idle (kernel activity keeps it alive during training) | — |
+
+### GCP Compute Management
+
+```bash
+# Stop when done (or let auto-shutdown handle it)
+gcloud workbench instances stop slm-workbench-l4 --location=asia-southeast1-b --project=project-162f6734-044f-424a-9ad
+
+# Start when ready to work
+gcloud workbench instances start slm-workbench-l4 --location=asia-southeast1-b --project=project-162f6734-044f-424a-9ad
+
+# Access JupyterLab
+# URL: https://43ffe1bf25bda0df-dot-asia-southeast1.notebooks.googleusercontent.com
+# Or via GCP Console → Vertex AI → Workbench → slm-workbench-l4 → Open JupyterLab
+```
+
+### GCP Cost Summary
+
+| State | Cost |
+|-------|------|
+| VM running (training/evaluating) | ~$1.00/hr |
+| VM stopped (idle) | ~$1.70/day (disk storage only) |
+| Monthly (est. 20h usage + idle) | ~$71/mo |
+
+### Key Differences from Azure Setup
+
+| | Azure (old) | GCP (current) |
+|---|---|---|
+| GPU | 2× V100 16GB (32GB total) | 1× L4 24GB |
+| Training speed | ~90 min/run | ~2.5–3 hr/run |
+| Cost/hr | $6.12–8.00 | $1.00 |
+| Idle cost | $6.12/hr (forgot to stop) | $0 (auto-shutdown) |
+| Model loading | `max_memory={0:'6GiB', 1:'15GiB'}` | `device_map='auto'` (single GPU) |
+| Python env | System Python | `/opt/micromamba/envs/jupyterlab/` |
+| Package install | `pip install` | `sudo /opt/micromamba/envs/jupyterlab/bin/pip install` |
+
 ## Task Progress
 
 | Task | Status | Details |
