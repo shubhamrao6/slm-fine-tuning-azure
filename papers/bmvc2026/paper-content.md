@@ -30,7 +30,7 @@ Using only 18 to 30 labeled images per task, our method consistently outperforms
 Our contributions are:
 
 1. We introduce answer-conditioned CoT distillation for VLMs, where a frontier model generates justified reasoning given the correct answer, and a small model is fine-tuned on these reasoning-augmented examples.
-2. We validate the method across four industrial domains spanning three image modalities, showing consistent improvement over direct fine-tuning (+2.5 to +8.3 percentage points).
+2. We validate the method across four industrial domains spanning three image modalities, showing consistent improvement over direct fine-tuning (+0.9 to +8.3 percentage points).
 3. We demonstrate that a 3B-parameter model fine-tuned on 24 images can outperform a frontier model on weld defect classification.
 4. We show that this approach addresses a real manufacturing need: rapid adaptation to new inspection tasks when only minimal labeled data is available.
 
