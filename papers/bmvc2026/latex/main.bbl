@@ -1,0 +1,140 @@
+\begin{thebibliography}{19}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Coenen et~al.(2022)Coenen, Beyer, Heipke, and
+  Haist]{coenen2022learning}
+M.~Coenen, D.~Beyer, C.~Heipke, and M.~Haist.
+\newblock Learning to sieve: Prediction of grading curves from images of
+  concrete aggregate.
+\newblock \emph{ISPRS Annals of Photogrammetry, Remote Sensing and Spatial
+  Information Sciences}, V-2-2022:\penalty0 227--235, 2022.
+
+\bibitem[Czimmermann et~al.(2020)Czimmermann, Ciuti, Milazzo, Chiurazzi,
+  Roccella, Oddo, and Dario]{czimmermann2020visual}
+T.~Czimmermann, G.~Ciuti, M.~Milazzo, M.~Chiurazzi, S.~Roccella, C.M. Oddo, and
+  P.~Dario.
+\newblock Visual-based defect detection and classification approaches for
+  industrial applications---a survey.
+\newblock \emph{Sensors}, 20\penalty0 (5):\penalty0 1459, 2020.
+
+\bibitem[DeCost et~al.(2019)DeCost, Lei, Francis, and Holm]{decost2019high}
+B.L. DeCost, B.~Lei, T.~Francis, and E.A. Holm.
+\newblock High throughput quantitative metallography for complex
+  microstructures using deep learning: A case study in ultrahigh carbon steel.
+\newblock \emph{Microscopy and Microanalysis}, 25\penalty0 (1):\penalty0
+  21--29, 2019.
+
+\bibitem[{German Institute for Standardization (Deutsches Institut f{\"u}r
+  Normung)}(2008)]{din1045}
+{German Institute for Standardization (Deutsches Institut f{\"u}r Normung)}.
+\newblock {DIN} 1045-2:2008. {C}oncrete, reinforced and prestressed concrete
+  structures, 2008.
+
+\bibitem[Hsieh et~al.(2023)Hsieh, Li, Yeh, Nakhost, Fujii, Ratner, Krishna,
+  Lee, and Pfister]{hsieh2023distilling}
+C.Y. Hsieh, C.L. Li, C.K. Yeh, H.~Nakhost, Y.~Fujii, A.~Ratner, R.~Krishna,
+  C.Y. Lee, and T.~Pfister.
+\newblock Distilling step-by-step! outperforming larger language models with
+  less training data and smaller model sizes.
+\newblock In \emph{Findings of ACL}, 2023.
+
+\bibitem[Hu et~al.(2021)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{hu2021lora}
+E.J. Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, and
+  W.~Chen.
+\newblock {LoRA}: Low-rank adaptation of large language models.
+\newblock \emph{arXiv preprint arXiv:2106.09685}, 2021.
+
+\bibitem[Kakda et~al.(2026)Kakda, Muthukumaran, Patel, and
+  Prince]{vlm2026anomaly}
+M.~Kakda, M.S. Muthukumaran, U.~Patel, and L.S.X. Prince.
+\newblock Analyzing {VLM}-based approaches for anomaly classification and
+  segmentation.
+\newblock \emph{arXiv preprint arXiv:2601.13440}, 2026.
+
+\bibitem[Kang et~al.(2025)Kang, Aljundi, Dorovatas, and
+  Alahari]{online2025incontext}
+Z.~Kang, R.~Aljundi, V.~Dorovatas, and K.~Alahari.
+\newblock Online in-context distillation for low-resource vision language
+  models.
+\newblock \emph{arXiv preprint arXiv:2510.18117}, 2025.
+
+\bibitem[Lee et~al.(2024)Lee, Hachiuma, Wang, Ro, and Wu]{vlsi2024verbalized}
+B.K. Lee, R.~Hachiuma, Y.C.F. Wang, Y.M. Ro, and Y.H. Wu.
+\newblock {VLsI}: Verbalized layers-to-interactions from large to small vision
+  language models.
+\newblock \emph{arXiv preprint arXiv:2412.01822}, 2024.
+
+\bibitem[Megahed et~al.(2025)Megahed, Chen, Colosimo, and
+  Grasso]{clip2025fewshot}
+F.M. Megahed, Y.J. Chen, B.M. Colosimo, and M.L.G. Grasso.
+\newblock Adapting {OpenAI}'s {CLIP} model for few-shot image inspection in
+  manufacturing quality control.
+\newblock \emph{arXiv preprint arXiv:2501.12596}, 2025.
+
+\bibitem[Moenck et~al.(2024)Moenck, Thieu, Koch, and
+  Sch{\"u}ppstuhl]{adapting2024industry}
+K.~Moenck, D.T. Thieu, J.~Koch, and T.~Sch{\"u}ppstuhl.
+\newblock Industrial language-image dataset ({ILID}): Adapting vision
+  foundation models for industrial settings.
+\newblock \emph{arXiv preprint arXiv:2406.09637}, 2024.
+
+\bibitem[Song and Yan(2013)]{song2013noise}
+K.~Song and Y.~Yan.
+\newblock A noise robust method based on completed local binary patterns for
+  hot-rolled steel strip surface defects.
+\newblock \emph{Applied Surface Science}, 285:\penalty0 858--864, 2013.
+
+\bibitem[Totino et~al.(2022)Totino, Spagnolo, and Perri]{totino2022riawelc}
+B.~Totino, F.~Spagnolo, and S.~Perri.
+\newblock {RIAWELC}: A novel dataset of radiographic images for automatic weld
+  defects classification.
+\newblock \emph{Research Square (Preprint)}, 2022.
+
+\bibitem[Wang et~al.(2024)Wang, Bai, Tan, Wang, Fan, Bai, Chen, Liu, Wang, Ge,
+  Fan, Dang, Du, Ren, Men, Liu, Zhou, Zhou, and Lin]{wang2024qwen2vl}
+P.~Wang, S.~Bai, S.~Tan, S.~Wang, Z.~Fan, J.~Bai, K.~Chen, X.~Liu, J.~Wang,
+  W.~Ge, Y.~Fan, K.~Dang, M.~Du, X.~Ren, R.~Men, D.~Liu, C.~Zhou, J.~Zhou, and
+  J.~Lin.
+\newblock Qwen2-{VL}: Enhancing vision-language model's perception of the world
+  at any resolution.
+\newblock \emph{arXiv preprint arXiv:2409.12191}, 2024.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le,
+  and Zhou]{wei2022chain}
+J.~Wei, X.~Wang, D.~Schuurmans, M.~Bosma, B.~Ichter, F.~Xia, E.~Chi, Q.V. Le,
+  and D.~Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language
+  models.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~35, pages 24824--24837, 2022.
+
+\bibitem[Yin et~al.(2025)Yin, Jiang, Chen, Wang, and Ling]{enhancing2025cot}
+M.J. Yin, D.~Jiang, Y.~Chen, B.~Wang, and C.~Ling.
+\newblock Enhancing generalization in chain of thought reasoning for smaller
+  models.
+\newblock \emph{arXiv preprint arXiv:2501.09804}, 2025.
+
+\bibitem[Zhang(2025)]{zhang2025seal}
+W.~Zhang.
+\newblock Reproducing {SEAL}.
+\newblock Blog post: \url{https://wtzhang99.github.io/blog/reproducing-seal/},
+  2025.
+
+\bibitem[Zhang et~al.(2024)Zhang, Meyer, Lu, Shrivastava, and
+  Ravichandran]{kd2024longtail}
+Z.~Zhang, G.P. Meyer, Z.~Lu, A.~Shrivastava, and A.~Ravichandran.
+\newblock Knowledge distillation from {VLM} for long-tail visual recognition.
+\newblock \emph{arXiv preprint arXiv:2408.16930}, 2024.
+
+\bibitem[Zweiger et~al.(2025)Zweiger, Pari, Guo, Aky{\"u}rek, Kim, and
+  Agrawal]{zweiger2025seal}
+A.~Zweiger, J.~Pari, H.~Guo, E.~Aky{\"u}rek, Y.~Kim, and P.~Agrawal.
+\newblock {SEAL}: Self-adapting language models.
+\newblock \emph{arXiv preprint arXiv:2506.10943}, 2025.
+
+\end{thebibliography}
