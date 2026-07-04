@@ -286,13 +286,10 @@ def train_lora(base_model, processor, jsonl_path, output_dir, seed):
     losses = []
 
     for epoch in range(EPOCHS):
-        # Shuffle order per epoch (seed-dependent)
-        indices = list(range(len(dataset)))
-        random.shuffle(indices)
-
+        # Iterate sequentially (same as original notebooks — no shuffling)
         epoch_loss = 0
-        for step, i in enumerate(indices):
-            batch = dataset[i]
+        for step in range(len(dataset)):
+            batch = dataset[step]
             ids = batch['input_ids'].unsqueeze(0).to(model.device)
             mask = batch['attention_mask'].unsqueeze(0).to(model.device)
             lab = batch['labels'].unsqueeze(0).to(model.device)
@@ -318,7 +315,7 @@ def train_lora(base_model, processor, jsonl_path, output_dir, seed):
             torch.cuda.empty_cache()
 
         # Final step if not aligned with GRAD_ACCUM
-        if len(indices) % GRAD_ACCUM != 0:
+        if len(dataset) % GRAD_ACCUM != 0:
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             optimizer.step()
             scheduler.step()
