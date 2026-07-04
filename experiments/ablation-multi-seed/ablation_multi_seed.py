@@ -43,7 +43,15 @@ from collections import defaultdict
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
 
-SEEDS = [42, 123, 456, 789, 1024]
+SEEDS = [123, 456, 789, 1024]
+
+# Existing seed-42 results (from task4-fine-tuning)
+SEED42_RESULTS = {
+    "granulometry": {"direct": 71.3, "augmented": 79.6},
+    "steel_surface": {"direct": 63.1, "augmented": 66.7},
+    "uhcs": {"direct": 67.5, "augmented": 68.4},
+    "weld": {"direct": 73.3, "augmented": 75.8},
+}
 
 # Paths relative to THIS script's location
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -117,9 +125,6 @@ def set_all_seeds(seed):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
-    # For deterministic behavior (slightly slower)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -128,6 +133,9 @@ def set_all_seeds(seed):
 
 def parse_json_response(raw):
     """Parse JSON from model response, handling markdown fences and CoT prefixes."""
+    if not raw:
+        return None
+    raw = raw.replace('<', '').replace('>', '')
     # Strip markdown fences
     cleaned = re.sub(r'```json\s*', '', raw)
     cleaned = re.sub(r'```\s*', '', cleaned).strip()
@@ -173,12 +181,8 @@ def evaluate_classification_response(parsed, gt_class, key="defect_class"):
     """Evaluate classification: returns True/False."""
     if parsed is None:
         return False
-    # Try different possible keys
-    for k in [key, "primary_microconstituent", "defect_class", "class"]:
-        pred = parsed.get(k, "").lower().strip()
-        if pred:
-            return pred == gt_class.lower().strip()
-    return False
+    pred = parsed.get(key, "").lower().strip()
+    return pred == gt_class.lower().strip()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -188,11 +192,11 @@ def evaluate_classification_response(parsed, gt_class, key="defect_class"):
 class LoRADataset(torch.utils.data.Dataset):
     """Universal dataset for all 4 tasks — reads JSONL training data."""
 
-    def __init__(self, jsonl_path, processor, base_dir=None):
+    def __init__(self, jsonl_path, processor):
         with open(jsonl_path) as f:
             self.data = [json.loads(line) for line in f]
         self.processor = processor
-        self.base_dir = base_dir or os.path.dirname(jsonl_path)
+        self.base_dir = os.path.dirname(jsonl_path)
 
     def __len__(self):
         return len(self.data)
@@ -275,7 +279,7 @@ def train_lora(base_model, processor, jsonl_path, output_dir, seed):
     model.gradient_checkpointing_enable()
     model.print_trainable_parameters()
 
-    dataset = LoRADataset(jsonl_path, processor, base_dir=os.path.dirname(jsonl_path))
+    dataset = LoRADataset(jsonl_path, processor)
     print(f'  Training: {len(dataset)} examples, {EPOCHS} epochs, lr={LR}, seed={seed}')
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=0.01)
@@ -313,13 +317,6 @@ def train_lora(base_model, processor, jsonl_path, output_dir, seed):
 
             del ids, mask, lab, out, loss
             torch.cuda.empty_cache()
-
-        # Final step if not aligned with GRAD_ACCUM
-        if len(dataset) % GRAD_ACCUM != 0:
-            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-            optimizer.step()
-            scheduler.step()
-            optimizer.zero_grad()
 
         avg_loss = epoch_loss / len(dataset)
         losses.append(avg_loss)
@@ -404,7 +401,7 @@ def load_test_set_weld(task_config):
         if not os.path.exists(cls_dir):
             print(f"  WARNING: {cls_dir} not found")
             continue
-        images = sorted([f for f in os.listdir(cls_dir) if f.lower().endswith(('.jpg', '.jpeg', '.png', '.bmp'))])
+        images = sorted([f for f in os.listdir(cls_dir) if f.lower().endswith('.png')])
         if len(images) > SAMPLE_PER_CLASS:
             images = _random.sample(images, SAMPLE_PER_CLASS)
         for fname in images:
@@ -669,7 +666,7 @@ def run_ablation():
         summary[task_name] = {}
 
         for approach in ["direct", "augmented"]:
-            accs = [all_results[task_name][approach].get(s) for s in SEEDS]
+            accs = [SEED42_RESULTS[task_name][approach]] + [all_results[task_name][approach].get(s) for s in SEEDS]
             accs = [a for a in accs if a is not None]
 
             if accs:
@@ -681,9 +678,9 @@ def run_ablation():
                 print(f'  {approach:12s}: NO RESULTS')
 
         # Paired difference (CoT-Aug minus Direct)
-        direct_accs = [all_results[task_name]["direct"].get(s) for s in SEEDS]
-        aug_accs = [all_results[task_name]["augmented"].get(s) for s in SEEDS]
-        paired = [(a - d) for s, d, a in zip(SEEDS, direct_accs, aug_accs) if d is not None and a is not None]
+        direct_accs = [SEED42_RESULTS[task_name]["direct"]] + [all_results[task_name]["direct"].get(s) for s in SEEDS]
+        aug_accs = [SEED42_RESULTS[task_name]["augmented"]] + [all_results[task_name]["augmented"].get(s) for s in SEEDS]
+        paired = [(a - d) for d, a in zip(direct_accs, aug_accs) if d is not None and a is not None]
 
         if paired:
             delta_mean = np.mean(paired)
