@@ -43,7 +43,7 @@ from collections import defaultdict
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
 
-SEEDS = [123, 456, 789, 1024]
+SEEDS = [42, 123, 456, 789, 1024]
 
 # Existing seed-42 results (from task4-fine-tuning)
 SEED42_RESULTS = {
@@ -136,7 +136,6 @@ def parse_json_response(raw):
     if not raw:
         return None
     raw = raw.replace('<', '').replace('>', '')
-    # Strip markdown fences
     cleaned = re.sub(r'```json\s*', '', raw)
     cleaned = re.sub(r'```\s*', '', cleaned).strip()
 
@@ -148,13 +147,27 @@ def parse_json_response(raw):
     except (json.JSONDecodeError, ValueError):
         pass
 
-    # Find last JSON object in the response (handles CoT + JSON)
-    matches = list(re.finditer(r'\{[^{}]*\}', cleaned))
-    if matches:
+    # Find JSON object in response (re.DOTALL to match across newlines)
+    m = re.search(r'\{.*\}', cleaned, re.DOTALL)
+    if m:
         try:
-            return json.loads(matches[-1].group())
+            return json.loads(m.group())
         except (json.JSONDecodeError, ValueError):
             pass
+
+    # Fallback: regex for individual fields
+    sm = re.search(r'"max_particle_size_mm"\s*:\s*(\d+)', cleaned)
+    gm = re.search(r'"grading"\s*:\s*"(\w+)"', cleaned)
+    if sm and gm:
+        return {'max_particle_size_mm': int(sm.group(1)), 'grading': gm.group(1)}
+
+    dm = re.search(r'"primary_microconstituent"\s*:\s*"([\w+]+)"', cleaned)
+    if dm:
+        return {'primary_microconstituent': dm.group(1)}
+
+    dm2 = re.search(r'"defect_class"\s*:\s*"([\w]+)"', cleaned)
+    if dm2:
+        return {'defect_class': dm2.group(1)}
 
     return None
 
@@ -511,8 +524,7 @@ Respond with ONLY a JSON object:
             ]}]
 
             text = processor.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
-            inputs = processor(text=[text], images=[image], return_tensors='pt', padding=True)
-            inputs = {k: v.to(model.device) if hasattr(v, 'to') else v for k, v in inputs.items()}
+            inputs = processor(text=[text], images=[image], return_tensors='pt', padding=True).to(model.device)
 
             output_ids = model.generate(
                 **inputs,
@@ -521,7 +533,7 @@ Respond with ONLY a JSON object:
                 do_sample=True,
             )
             raw = processor.batch_decode(
-                output_ids[:, inputs['input_ids'].shape[1]:],
+                output_ids[:, inputs.input_ids.shape[1]:],
                 skip_special_tokens=True
             )[0].strip()
 
@@ -580,7 +592,7 @@ def train_and_evaluate(task_name, approach, seed):
     t0 = time.time()
     processor = AutoProcessor.from_pretrained(MODEL_ID, min_pixels=256*28*28, max_pixels=512*28*28)
     base_model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        MODEL_ID, torch_dtype=torch.bfloat16, device_map='auto'
+        MODEL_ID, torch_dtype=torch.float32, device_map='auto'
     )
     base_model.enable_input_require_grads()
     print(f'  Model loaded in {time.time()-t0:.1f}s')
@@ -666,7 +678,7 @@ def run_ablation():
         summary[task_name] = {}
 
         for approach in ["direct", "augmented"]:
-            accs = [SEED42_RESULTS[task_name][approach]] + [all_results[task_name][approach].get(s) for s in SEEDS]
+            accs = [all_results[task_name][approach].get(s) for s in SEEDS]
             accs = [a for a in accs if a is not None]
 
             if accs:
@@ -678,8 +690,8 @@ def run_ablation():
                 print(f'  {approach:12s}: NO RESULTS')
 
         # Paired difference (CoT-Aug minus Direct)
-        direct_accs = [SEED42_RESULTS[task_name]["direct"]] + [all_results[task_name]["direct"].get(s) for s in SEEDS]
-        aug_accs = [SEED42_RESULTS[task_name]["augmented"]] + [all_results[task_name]["augmented"].get(s) for s in SEEDS]
+        direct_accs = [all_results[task_name]["direct"].get(s) for s in SEEDS]
+        aug_accs = [all_results[task_name]["augmented"].get(s) for s in SEEDS]
         paired = [(a - d) for d, a in zip(direct_accs, aug_accs) if d is not None and a is not None]
 
         if paired:
