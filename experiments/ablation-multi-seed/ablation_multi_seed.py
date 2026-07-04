@@ -592,7 +592,8 @@ def train_and_evaluate(task_name, approach, seed):
     t0 = time.time()
     processor = AutoProcessor.from_pretrained(MODEL_ID, min_pixels=256*28*28, max_pixels=512*28*28)
     base_model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        MODEL_ID, torch_dtype=torch.float32, device_map='auto'
+        MODEL_ID, torch_dtype=torch.bfloat16, device_map='auto',
+        attn_implementation="eager"
     )
     base_model.enable_input_require_grads()
     print(f'  Model loaded in {time.time()-t0:.1f}s')
