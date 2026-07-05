@@ -32,18 +32,16 @@ EVAL_TEMPERATURE = 0.1
 RESULTS_DIR = SCRIPT_DIR / "results"
 RESULTS_DIR.mkdir(exist_ok=True)
 
-MODELS = ["gpt-41", "gpt-5"]  # matches filenames (dots removed)
-
 TASKS = {
     "granulometry": {
-        "unconditioned_template": str(SCRIPT_DIR / "granulometry_unconditioned_{model}.jsonl"),
+        "unconditioned_jsonl": SCRIPT_DIR / "granulometry_unconditioned_cot.jsonl",
         "direct_jsonl": TASK4_DIR / "granulometry" / "training_data_direct.jsonl",
         "test_manifest": REPO_ROOT / "datasets" / "granulometry" / "test_manifest.json",
         "test_dir": REPO_ROOT / "datasets" / "granulometry" / "test",
         "eval_type": "granulometry",
     },
     "weld": {
-        "unconditioned_template": str(SCRIPT_DIR / "weld_unconditioned_{model}.jsonl"),
+        "unconditioned_jsonl": SCRIPT_DIR / "weld_unconditioned_cot.jsonl",
         "direct_jsonl": TASK4_DIR / "riawelc-weld" / "training_data_direct.jsonl",
         "test_dir": REPO_ROOT / "datasets" / "riawelc" / "testing",
         "classes": ["lack_of_penetration", "porosity", "cracks", "no_defect"],
@@ -204,45 +202,35 @@ def train_and_evaluate_unconditioned(task_name, task_config):
 
 if __name__ == "__main__":
     results = {}
-    for model_name in MODELS:
-        print(f"\n\n{'#'*70}")
-        print(f"  MODEL: {model_name}")
-        print(f"{'#'*70}")
+    for task_name, task_config in TASKS.items():
+        if not task_config["unconditioned_jsonl"].exists():
+            print(f"ERROR: {task_config['unconditioned_jsonl']} not found. Run generate_unconditioned_cot.py first.")
+            continue
 
-        for task_name, task_config in TASKS.items():
-            jsonl_path = task_config["unconditioned_template"].format(model=model_name)
-            if not os.path.exists(jsonl_path):
-                print(f"ERROR: {jsonl_path} not found. Run generate_unconditioned_cot.py first.")
-                continue
+        result_file = RESULTS_DIR / f"{task_name}_unconditioned_cot.json"
+        if result_file.exists():
+            with open(result_file) as f:
+                existing = json.load(f)
+            print(f'[SKIP] {task_name}: {existing["accuracy"]:.1f}%')
+            results[task_name] = existing["accuracy"]
+            continue
 
-            # Override the jsonl path for this run
-            run_config = dict(task_config)
-            run_config["unconditioned_jsonl"] = Path(jsonl_path)
+        print(f'\n{"="*60}')
+        print(f'  {task_name.upper()} | Unconditioned CoT (Gemini 2.5 Pro)')
+        print(f'{"="*60}')
 
-            result_file = RESULTS_DIR / f"{task_name}_unconditioned_{model_name}.json"
-            if result_file.exists():
-                with open(result_file) as f:
-                    existing = json.load(f)
-                print(f'[SKIP] {task_name}/{model_name}: {existing["accuracy"]:.1f}%')
-                results[f"{task_name}_{model_name}"] = existing["accuracy"]
-                continue
+        t_start = time.time()
+        accuracy = train_and_evaluate_unconditioned(task_name, task_config)
+        elapsed = time.time() - t_start
 
-            print(f'\n{"="*60}')
-            print(f'  {task_name.upper()} | Unconditioned CoT ({model_name})')
-            print(f'{"="*60}')
-
-            t_start = time.time()
-            accuracy = train_and_evaluate_unconditioned(task_name, run_config)
-            elapsed = time.time() - t_start
-
-            results[f"{task_name}_{model_name}"] = accuracy
-            with open(result_file, 'w') as f:
-                json.dump({"task": task_name, "model": model_name, "approach": "unconditioned_cot",
-                           "accuracy": accuracy, "elapsed_min": round(elapsed / 60, 1)}, f, indent=2)
-            print(f'  → {accuracy:.1f}% (took {elapsed/60:.1f} min)')
+        results[task_name] = accuracy
+        with open(result_file, 'w') as f:
+            json.dump({"task": task_name, "model": "gemini-2.5-pro", "approach": "unconditioned_cot",
+                       "accuracy": accuracy, "elapsed_min": round(elapsed / 60, 1)}, f, indent=2)
+        print(f'  → {accuracy:.1f}% (took {elapsed/60:.1f} min)')
 
     print(f'\n\n{"="*60}')
-    print("UNCONDITIONED COT RESULTS")
+    print("UNCONDITIONED COT RESULTS (Gemini 2.5 Pro)")
     print(f'{"="*60}')
-    for key, acc in results.items():
-        print(f'  {key}: {acc:.1f}%')
+    for task_name, acc in results.items():
+        print(f'  {task_name}: {acc:.1f}%')
