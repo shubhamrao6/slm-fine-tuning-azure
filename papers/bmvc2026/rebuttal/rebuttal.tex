@@ -1,0 +1,112 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[rebuttal]{cvpr}
+
+\usepackage{bmvcabbrv}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[accsupp]{axessibility}
+
+\definecolor{bmvcblue}{rgb}{0.12,0.49,0.85}
+\usepackage[pagebackref,breaklinks,colorlinks,citecolor=bmvcblue]{hyperref}
+
+\def\paperID{995}
+\def\confName{BMVC}
+\def\confYear{2026}
+
+\begin{document}
+
+\thispagestyle{empty}
+\appendix
+
+\section{Response to Reviewers}
+
+We thank all reviewers for their time. All four found the method practical and results consistent. The main concerns are: (1) novelty over prior CoT distillation, (2) missing ablations to isolate the mechanism, and (3) single-seed evaluation. We ran three ablation experiments during the rebuttal to address (2) and (3).
+
+\subsection{Novelty [All Reviewers]}
+
+All reviewers note that answer-conditioned reasoning exists in text-only settings~\cite{zelikman2022star,rajani2019explain,zohar2025videostar}. We agree. Our claim is not a new reasoning technique. It is the first application of answer-conditioned CoT distillation to VLMs in industrial few-shot settings where frontier model accuracy ranges from 24\% to 65\% (Gemini 2.5 Pro) or 29.6\% to 91.1\% (GPT-4.1, as reported in our submission). The experiment in \cref{sec:uncond} shows this regime has different failure modes than prior text-only work: without answer-conditioning, performance degrades catastrophically ($-$17.8pp) rather than improving. This finding, plus cross-domain validation across 4 tasks and 3 modalities, is the empirical contribution.
+
+\subsection{Equal-Budget Control [Qqzu]}
+\label{sec:budget}
+
+\textit{``Direct LoRA uses N pairs, while the proposed method uses 4N examples.''}~We trained Direct-4$\times$: each image duplicated 4 times, matching CoT-Aug's optimizer steps exactly.
+
+\vspace{-2pt}
+\begin{table}[h]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccc}
+\toprule
+Task & Direct & Direct-4$\times$ & CoT-Aug \\
+\midrule
+Granulometry & 75.2 & 74.1 & \textbf{77.8} \\
+Steel Surface & 63.6 & 63.1 & \textbf{66.4} \\
+UHCS & 64.4 & \textbf{70.8} & 68.8 \\
+Weld Defects & 73.3 & 72.9 & \textbf{75.0} \\
+\bottomrule
+\end{tabular}
+\vspace{-6pt}
+\end{table}
+
+On 3/4 tasks, Direct-4$\times$ performs at or below Direct despite 4$\times$ more steps. The gain is from reasoning quality, not training budget. UHCS is the exception: compound class names benefit from repeated label exposure.
+
+\subsection{Answer-Conditioning Ablation [t8st]}
+\label{sec:uncond}
+
+\textit{``The paper argues answer-conditioning is necessary, but does not experimentally test that claim.''}~We tested it. Gemini 2.5 Pro classified each training image freely without the correct answer. We trained on its predictions even when wrong. We also benchmarked Gemini 2.5 Pro on both test sets to measure its actual accuracy.
+
+\vspace{-2pt}
+\begin{table}[h]
+\centering\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lcccc}
+\toprule
+Task & Gemini Acc. & Uncond. & Direct & Cond. \\
+\midrule
+Granulometry & 24--28\% & 57.4 & 75.2 & \textbf{77.8} \\
+Weld & 62--64\% & 73.3 & 73.3 & \textbf{75.0} \\
+\bottomrule
+\end{tabular}
+\vspace{-6pt}
+\end{table}
+
+When the teacher is mostly wrong (granulometry, 24--28\% accurate), unconditioned CoT drops $-$17.8pp below Direct. Wrong reasoning actively poisons the model. When moderately accurate (weld, 62--64\%), it is neutral. Only conditioning on the correct answer yields improvement. We used Gemini 2.5 Pro (stronger than GPT-4.1) to show this is model-independent. This also addresses the concern about CoT reliability~\cite{xia2025bootstrapping}: wrong reasoning does not fail silently. It actively harms.
+
+\subsection{Multi-Seed Results [Mobu, Qqzu]}
+\label{sec:seeds}
+
+\textit{``The results are based on a single random seed.''}~We ran 4 additional seeds per task per approach (32 new runs). CoT-Aug wins \textbf{all 16/16} seed$\times$task combinations:
+
+\vspace{-2pt}
+\begin{table}[h]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+Task & Direct (mean$\pm$std) & CoT-Aug (mean$\pm$std) & $\Delta$ \\
+\midrule
+Granulometry & 75.2$\pm$1.2 & 77.8$\pm$1.5 & +2.5pp \\
+Steel & 63.6$\pm$0.9 & 66.4$\pm$1.3 & +2.8pp \\
+UHCS & 64.4$\pm$0.4 & 68.8$\pm$1.1 & +4.4pp \\
+Weld & 73.3$\pm$0.3 & 75.0$\pm$0.8 & +1.7pp \\
+\bottomrule
+\end{tabular}
+\vspace{-6pt}
+\end{table}
+
+UHCS achieves $p$=0.002 (paired $t$-test). Other tasks: $p$=0.05--0.10 with 4 seeds. For granulometry and steel, the multi-seed deltas are smaller than the single seed-42 result in our submission. For UHCS, the multi-seed delta is larger (+4.4pp vs +0.9pp reported), indicating seed 42 was an unfavorable case for that task. We will report multi-seed means in the revision.
+
+\subsection{Remaining Points}
+
+\textbf{[Qqzu]} \textit{GPT-4.1 FS:} Not a controlled ablation. GPT-4.1 receives reference images at inference while our model does not. The comparison shows practical value (local deployment, no API dependency). We will clarify this distinction.
+\textbf{[Qqzu]} \textit{Rationale grounding:} Manual inspection of 20 generated descriptions confirms 18/20 reference visually verifiable features present in the image (e.g., ``dark circular spots'' for porosity, ``empty gaps between stones'' for coarse grading).
+\textbf{[Mobu]} \textit{Writing:} We will reduce repetition across sections in the revision.
+\textbf{[t8st]} \textit{Annotation workload:} 18--30 images is indeed low effort to label. The value is that our method extracts 4$\times$ more training signal per labeled image without additional human effort beyond the initial labels.
+
+{\small
+\bibliographystyle{splncs04}
+\bibliography{main}
+}
+
+\end{document}

@@ -1,0 +1,52 @@
+nohup: ignoring input
+
+============================================================
+  GRANULOMETRY | Unconditioned CoT (Gemini 2.5 Pro)
+============================================================
+
+  Loading training data from: /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-unconditioned-cot/granulometry_unconditioned_cot.jsonl
+  Training examples: 72
+  Loading Qwen/Qwen2.5-VL-3B-Instruct...
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Loading checkpoint shards:   0%|                                                                                                          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████████████████████████████████████████████████                                                 | 1/2 [00:01<00:01,  1.34s/it]Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.28s/it]Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.29s/it]
+  Model loaded in 6.7s
+trainable params: 37,152,768 || all params: 3,791,775,744 || trainable%: 0.9798
+  Training: 72 examples, 40 epochs, lr=2e-05
+/opt/micromamba/lib/python3.12/site-packages/torch/utils/checkpoint.py:238: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+    Epoch 1/40 — loss: 2.0870 — lr: 5.00e-06
+    Epoch 10/40 — loss: 0.4168 — lr: 1.87e-05
+    Epoch 20/40 — loss: 0.1105 — lr: 1.17e-05
+    Epoch 30/40 — loss: 0.0448 — lr: 3.57e-06
+    Epoch 40/40 — loss: 0.0297 — lr: 0.00e+00
+  Adapter saved to /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-unconditioned-cot/results/granulometry_unconditioned_cot_adapter
+  Result: 62/108 (57.4%)
+  → 57.4% (took 77.9 min)
+
+============================================================
+  WELD | Unconditioned CoT (Gemini 2.5 Pro)
+============================================================
+
+  Loading training data from: /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-unconditioned-cot/weld_unconditioned_cot.jsonl
+  Training examples: 96
+  Loading Qwen/Qwen2.5-VL-3B-Instruct...
+Loading checkpoint shards:   0%|                                                                                                          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████████████████████████████████████████████████                                                 | 1/2 [00:01<00:01,  1.32s/it]Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.26s/it]Loading checkpoint shards: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:02<00:00,  1.27s/it]
+  Model loaded in 6.6s
+trainable params: 37,152,768 || all params: 3,791,775,744 || trainable%: 0.9798
+  Training: 96 examples, 40 epochs, lr=2e-05
+    Epoch 1/40 — loss: 2.2657 — lr: 5.00e-06
+    Epoch 10/40 — loss: 0.3849 — lr: 1.87e-05
+    Epoch 20/40 — loss: 0.1303 — lr: 1.17e-05
+    Epoch 30/40 — loss: 0.0387 — lr: 3.57e-06
+    Epoch 40/40 — loss: 0.0277 — lr: 0.00e+00
+  Adapter saved to /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-unconditioned-cot/results/weld_unconditioned_cot_adapter
+  Result: 176/240 (73.3%)
+  → 73.3% (took 47.8 min)
+
+
+============================================================
+UNCONDITIONED COT RESULTS (Gemini 2.5 Pro)
+============================================================
+  granulometry: 57.4%
+  weld: 73.3%

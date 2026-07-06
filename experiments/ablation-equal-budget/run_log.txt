@@ -1,0 +1,123 @@
+nohup: ignoring input
+
+============================================================
+  GRANULOMETRY | Direct-4× (duplicated)
+============================================================
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783268160.800182    7044 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783268171.392340    7044 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+
+  Loading training data from: /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-equal-budget/granulometry_direct_4x.jsonl
+  Training examples: 72
+  Loading Qwen/Qwen2.5-VL-3B-Instruct...
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:32<00:32, 32.74s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:57<00:00, 63.10s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:57<00:00, 58.54s/it]
+  Model loaded in 121.3s
+trainable params: 37,152,768 || all params: 3,791,775,744 || trainable%: 0.9798
+  Training: 72 examples, 40 epochs, lr=2e-05
+/opt/micromamba/lib/python3.12/site-packages/torch/utils/checkpoint.py:86: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+    Epoch 1/40 — loss: 0.1842 — lr: 5.00e-06
+    Epoch 10/40 — loss: 0.1234 — lr: 1.87e-05
+    Epoch 20/40 — loss: 0.0160 — lr: 1.17e-05
+    Epoch 30/40 — loss: 0.0001 — lr: 3.57e-06
+    Epoch 40/40 — loss: 0.0001 — lr: 0.00e+00
+  Adapter saved to /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-equal-budget/results/granulometry_direct_4x_adapter
+    Eval: 50/108 — 35/50 (70.0%)
+    Eval: 100/108 — 74/100 (74.0%)
+  Result: 80/108 (74.1%)
+  GPU memory freed.
+  → 74.1% (took 140.9 min)
+
+============================================================
+  STEEL_SURFACE | Direct-4× (duplicated)
+============================================================
+
+  Loading training data from: /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-equal-budget/steel_surface_direct_4x.jsonl
+  Training examples: 120
+  Loading Qwen/Qwen2.5-VL-3B-Instruct...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.48s/it]
+  Model loaded in 6.9s
+trainable params: 37,152,768 || all params: 3,791,775,744 || trainable%: 0.9798
+  Training: 120 examples, 40 epochs, lr=2e-05
+/opt/micromamba/lib/python3.12/site-packages/torch/utils/checkpoint.py:86: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+    Epoch 1/40 — loss: 0.2179 — lr: 5.00e-06
+    Epoch 10/40 — loss: 0.0110 — lr: 1.87e-05
+    Epoch 20/40 — loss: 0.0001 — lr: 1.17e-05
+    Epoch 30/40 — loss: 0.0000 — lr: 3.57e-06
+    Epoch 40/40 — loss: 0.0000 — lr: 0.00e+00
+  Adapter saved to /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-equal-budget/results/steel_surface_direct_4x_adapter
+    Eval: 60/360 — 53/60 (88.3%)
+    Eval: 120/360 — 74/120 (61.7%)
+    Eval: 180/360 — 105/180 (58.3%)
+    Eval: 240/360 — 156/240 (65.0%)
+    Eval: 300/360 — 191/300 (63.7%)
+    Eval: 360/360 — 227/360 (63.1%)
+  Result: 227/360 (63.1%)
+  GPU memory freed.
+  → 63.1% (took 150.2 min)
+
+============================================================
+  UHCS | Direct-4× (duplicated)
+============================================================
+
+  Loading training data from: /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-equal-budget/uhcs_direct_4x.jsonl
+  Training examples: 120
+  Loading Qwen/Qwen2.5-VL-3B-Instruct...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.49s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.45s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.45s/it]
+  Model loaded in 6.9s
+trainable params: 37,152,768 || all params: 3,791,775,744 || trainable%: 0.9798
+  Training: 120 examples, 40 epochs, lr=2e-05
+/opt/micromamba/lib/python3.12/site-packages/torch/utils/checkpoint.py:86: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+    Epoch 1/40 — loss: 0.1519 — lr: 5.00e-06
+    Epoch 10/40 — loss: 0.0336 — lr: 1.87e-05
+    Epoch 20/40 — loss: 0.0001 — lr: 1.17e-05
+    Epoch 30/40 — loss: 0.0001 — lr: 3.57e-06
+    Epoch 40/40 — loss: 0.0001 — lr: 0.00e+00
+  Adapter saved to /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-equal-budget/results/uhcs_direct_4x_adapter
+    Eval: 50/120 — 38/50 (76.0%)
+    Eval: 100/120 — 74/100 (74.0%)
+  Result: 85/120 (70.8%)
+  GPU memory freed.
+  → 70.8% (took 209.0 min)
+
+============================================================
+  WELD | Direct-4× (duplicated)
+============================================================
+
+  Loading training data from: /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-equal-budget/weld_direct_4x.jsonl
+  Training examples: 96
+  Loading Qwen/Qwen2.5-VL-3B-Instruct...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.45s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.46s/it]
+  Model loaded in 6.7s
+trainable params: 37,152,768 || all params: 3,791,775,744 || trainable%: 0.9798
+  Training: 96 examples, 40 epochs, lr=2e-05
+/opt/micromamba/lib/python3.12/site-packages/torch/utils/checkpoint.py:86: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+    Epoch 1/40 — loss: 0.1742 — lr: 5.00e-06
+    Epoch 10/40 — loss: 0.0210 — lr: 1.87e-05
+    Epoch 20/40 — loss: 0.0000 — lr: 1.17e-05
+    Epoch 30/40 — loss: 0.0000 — lr: 3.57e-06
+    Epoch 40/40 — loss: 0.0000 — lr: 0.00e+00
+  Adapter saved to /home/jupyter/workspace/slm-fine-tuning-azure/experiments/ablation-equal-budget/results/weld_direct_4x_adapter
+    Eval: 60/240 — 42/60 (70.0%)
+    Eval: 120/240 — 86/120 (71.7%)
+    Eval: 180/240 — 128/180 (71.1%)
+    Eval: 240/240 — 175/240 (72.9%)
+  Result: 175/240 (72.9%)
+  GPU memory freed.
+  → 72.9% (took 112.0 min)
+
+
+============================================================
+EQUAL-BUDGET ABLATION RESULTS
+============================================================
+  granulometry: Direct-4× = 74.1%
+  steel_surface: Direct-4× = 63.1%
+  uhcs: Direct-4× = 70.8%
+  weld: Direct-4× = 72.9%

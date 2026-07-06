@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{rajani2019explain}
+Rajani, N.F., McCann, B., Xiong, C., Socher, R.: Explain yourself! leveraging
+  language models for commonsense reasoning. In: ACL (2019)
+
+\bibitem{xia2025bootstrapping}
+Xia, J., Tong, B., Zang, Y., et~al.: Bootstrapping grounded chain-of-thought in
+  multimodal {LLMs} for data-efficient model adaptation. In: ICCV (2025)
+
+\bibitem{zelikman2022star}
+Zelikman, E., Wu, Y., Mu, J., Goodman, N.: {STaR}: Bootstrapping reasoning with
+  reasoning. In: NeurIPS (2022)
+
+\bibitem{zohar2025videostar}
+Zohar, O., Wang, X., Bitton, Y., Szpektor, I., Yeung-Levy, S.: {Video-STaR}:
+  Self-training enables video instruction tuning with any supervision. In: ICLR
+  (2025)
+
+\end{thebibliography}

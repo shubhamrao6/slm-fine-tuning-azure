@@ -1,0 +1,103 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{czimmermann2020visual}
+\citation{din1045}
+\citation{wang2024qwen2vl}
+\citation{hu2021lora}
+\citation{hsieh2023distilling}
+\citation{zelikman2022star}
+\citation{zohar2025videostar}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{wei2022chain}
+\citation{hsieh2023distilling}
+\citation{zelikman2022star}
+\citation{rajani2019explain}
+\citation{zohar2025videostar}
+\citation{vlsi2024verbalized}
+\citation{kd2024longtail}
+\citation{online2025incontext}
+\citation{adapting2024industry}
+\citation{clip2025fewshot}
+\citation{xia2025bootstrapping}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{2}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{2}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{2}{Method}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Prompt Design}{2}{subsection.3.1}\protected@file@percent }
+\citation{wang2024qwen2vl}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Answer-Conditioned CoT Generation}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Training Data Construction}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Method overview. (a) Direct LoRA learns image$\rightarrow $JSON from $N$ pairs. (b) CoT-augmented LoRA: GPT-4.1 receives each image with the correct label and generates justified descriptions, yielding $4N$ training examples from $N$ images.}}{3}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:pipeline}{{1}{3}{Method overview. (a) Direct LoRA learns image$\rightarrow $JSON from $N$ pairs. (b) CoT-augmented LoRA: GPT-4.1 receives each image with the correct label and generates justified descriptions, yielding $4N$ training examples from $N$ images}{figure.caption.1}{}}
+\citation{coenen2022learning}
+\citation{song2013noise}
+\citation{decost2019high}
+\citation{totino2022riawelc}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}LoRA Fine-Tuning}{4}{subsection.3.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Training hyperparameters (identical for Direct and CoT-Aug).}}{4}{table.caption.2}\protected@file@percent }
+\newlabel{tab:hyperparams}{{1}{4}{Training hyperparameters (identical for Direct and CoT-Aug)}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Setup}{4}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{4}{Experimental Setup}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Dataset summary.}}{4}{table.caption.3}\protected@file@percent }
+\newlabel{tab:datasets}{{2}{4}{Dataset summary}{table.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Concrete aggregate: 9 classes (3 sizes $\times $ 3 gradings).}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:granulometry}{{2}{5}{Concrete aggregate: 9 classes (3 sizes $\times $ 3 gradings)}{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Steel surface: 6 defect classes (NEU-CLS).}}{6}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:steel}{{3}{6}{Steel surface: 6 defect classes (NEU-CLS)}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces UHCS: 5 microconstituent classes.}}{6}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:uhcs}{{4}{6}{UHCS: 5 microconstituent classes}{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Weld radiographs: 4 defect classes (RIAWELC).}}{6}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:weld}{{5}{6}{Weld radiographs: 4 defect classes (RIAWELC)}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Baselines and Evaluation}{7}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{7}{section.5}\protected@file@percent }
+\newlabel{sec:results}{{5}{7}{Results}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Main Results}{7}{subsection.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Accuracy (\%, mean$\pm $std over 4 seeds). Granulometry = both correct. Bold = best overall.}}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tab:main}{{3}{7}{Accuracy (\%, mean$\pm $std over 4 seeds). Granulometry = both correct. Bold = best overall}{table.caption.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Individual seed results (\%). CoT-Aug wins all 16 comparisons.}}{7}{table.caption.9}\protected@file@percent }
+\newlabel{tab:seeds}{{4}{7}{Individual seed results (\%). CoT-Aug wins all 16 comparisons}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Per-Class Analysis}{7}{subsection.5.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Per-class accuracy, weld defects (seed 42).}}{8}{table.caption.10}\protected@file@percent }
+\newlabel{tab:perclass_weld}{{5}{8}{Per-class accuracy, weld defects (seed 42)}{table.caption.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Per-class accuracy, steel surface (seed 42).}}{8}{table.caption.11}\protected@file@percent }
+\newlabel{tab:perclass_steel}{{6}{8}{Per-class accuracy, steel surface (seed 42)}{table.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Improvement Is From Reasoning Quality, Not Data Volume}{8}{subsection.5.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Equal-budget control (\%). Direct-4$\times $ matches CoT-Aug's optimizer steps.}}{8}{table.caption.12}\protected@file@percent }
+\newlabel{tab:budget}{{7}{8}{Equal-budget control (\%). Direct-4$\times $ matches CoT-Aug's optimizer steps}{table.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Answer-Conditioning Is Essential}{9}{subsection.5.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Unconditioned CoT (\%). Gemini 2.5 Pro as teacher without knowing the correct answer.}}{9}{table.caption.13}\protected@file@percent }
+\newlabel{tab:uncond}{{8}{9}{Unconditioned CoT (\%). Gemini 2.5 Pro as teacher without knowing the correct answer}{table.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Training Convergence}{9}{subsection.5.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Training loss at epochs 1, 20, 40. Direct reaches near-zero (memorization); CoT-Aug retains learning signal throughout.}}{9}{table.caption.14}\protected@file@percent }
+\newlabel{tab:convergence}{{9}{9}{Training loss at epochs 1, 20, 40. Direct reaches near-zero (memorization); CoT-Aug retains learning signal throughout}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{9}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{9}{Discussion}{section.6}{}}
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{coenen2022learning}{{1}{2022}{{Coenen et~al.}}{{Coenen, Beyer, Heipke, and Haist}}}
+\bibcite{czimmermann2020visual}{{2}{2020}{{Czimmermann et~al.}}{{Czimmermann, Ciuti, Milazzo, Chiurazzi, Roccella, Oddo, and Dario}}}
+\bibcite{decost2019high}{{3}{2019}{{DeCost et~al.}}{{DeCost, Lei, Francis, and Holm}}}
+\bibcite{din1045}{{4}{2008}{{German Institute for Standardization (Deutsches Institut f{\"u}r Normung)}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{10}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{10}{Conclusion}{section.7}{}}
+\bibcite{hsieh2023distilling}{{5}{2023}{{Hsieh et~al.}}{{Hsieh, Li, Yeh, Nakhost, Fujii, Ratner, Krishna, Lee, and Pfister}}}
+\bibcite{hu2021lora}{{6}{2021}{{Hu et~al.}}{{Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and Chen}}}
+\bibcite{online2025incontext}{{7}{2025}{{Kang et~al.}}{{Kang, Aljundi, Dorovatas, and Alahari}}}
+\bibcite{vlsi2024verbalized}{{8}{2024}{{Lee et~al.}}{{Lee, Hachiuma, Wang, Ro, and Wu}}}
+\bibcite{clip2025fewshot}{{9}{2025}{{Megahed et~al.}}{{Megahed, Chen, Colosimo, and Grasso}}}
+\bibcite{adapting2024industry}{{10}{2024}{{Moenck et~al.}}{{Moenck, Thieu, Koch, and Sch{\"u}ppstuhl}}}
+\bibcite{rajani2019explain}{{11}{2019}{{Rajani et~al.}}{{Rajani, McCann, Xiong, and Socher}}}
+\bibcite{song2013noise}{{12}{2013}{{Song and Yan}}{{}}}
+\bibcite{totino2022riawelc}{{13}{2022}{{Totino et~al.}}{{Totino, Spagnolo, and Perri}}}
+\bibcite{wang2024qwen2vl}{{14}{2024}{{Wang et~al.}}{{Wang, Bai, Tan, Wang, Fan, Bai, Chen, Liu, Wang, Ge, Fan, Dang, Du, Ren, Men, Liu, Zhou, Zhou, and Lin}}}
+\bibcite{wei2022chain}{{15}{2022}{{Wei et~al.}}{{Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, and Zhou}}}
+\bibcite{xia2025bootstrapping}{{16}{2025}{{Xia et~al.}}{{Xia, Tong, Zang, et~al.}}}
+\bibcite{zelikman2022star}{{17}{2022}{{Zelikman et~al.}}{{Zelikman, Wu, Mu, and Goodman}}}
+\bibcite{kd2024longtail}{{18}{2024}{{Zhang et~al.}}{{Zhang, Meyer, Lu, Shrivastava, and Ravichandran}}}
+\bibcite{zohar2025videostar}{{19}{2025}{{Zohar et~al.}}{{Zohar, Wang, Bitton, Szpektor, and Yeung-Levy}}}
+\gdef \@abspage@last{11}
