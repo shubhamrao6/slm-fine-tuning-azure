@@ -1,287 +1,115 @@
-# SLM Fine-Tuning on Azure
+# Answer-Conditioned CoT Distillation for Few-Shot Industrial Vision
 
-Evaluate and compare Small Language Models (SLMs) for industrial computer vision and NLP tasks, with LoRA fine-tuning on small datasets, targeting edge deployment on NVIDIA Jetson hardware.
+Fine-tune a 3B vision-language model (Qwen2.5-VL-3B) for industrial image classification using answer-conditioned chain-of-thought distillation from frontier models. Validated across 4 industrial tasks with only 18-30 labeled images per task.
 
-## Models
+## Results
 
-| Model | Parameters | Modality | Use Case |
-|-------|-----------|----------|----------|
-| Florence-2-large | 0.77B | Vision | Fast native object detection |
-| Qwen2.5-VL-3B | 3B | Vision | Granulometry (particle size detection) |
-| Qwen2.5-VL-7B | 7B | Vision | Quality comparison target |
-| Phi-4-multimodal | 5.6B | Vision + Text + Audio | Cybersecurity agents, general multimodal |
+### Main Results (mean ± std across 4 random seeds)
+
+| Task | Classes | Train Images | Base ZS | GPT-4.1 FS | Direct LoRA | CoT-Aug |
+|------|---------|-------------|---------|------------|-------------|---------|
+| Concrete Aggregate Grading | 9 | 18 | 12.0% | 29.6% | 75.2±1.2% | **77.8±1.5%** |
+| Steel Surface Defects | 6 | 30 | 21.7% | 91.1% | 63.6±0.9% | **66.4±1.3%** |
+| Steel Microstructure (UHCS) | 5 | 30 | 60.8% | 71.7% | 64.4±0.4% | **68.8±1.1%** |
+| Weld Defect Classification | 4 | 24 | 30.8% | 65.0% | 73.3±0.3% | **75.0±0.8%** |
+
+CoT-Aug wins on **all 16/16** seed × task combinations (4 seeds × 4 tasks). UHCS achieves p=0.002 (paired t-test).
+
+### Ablation: Equal-Budget Control
+
+| Task | Direct | Direct-4× (same steps) | CoT-Aug |
+|------|--------|------------------------|---------|
+| Granulometry | 75.2 | 74.1 | **77.8** |
+| Steel Surface | 63.6 | 63.1 | **66.4** |
+| UHCS | 64.4 | **70.8** | 68.8 |
+| Weld Defects | 73.3 | 72.9 | **75.0** |
+
+On 3/4 tasks, duplicating training data 4× does not help. The improvement comes from reasoning quality, not training budget.
+
+### Ablation: Answer-Conditioning Necessity
+
+| Task | Gemini 2.5 Pro Accuracy | Unconditioned CoT | Direct | Conditioned CoT-Aug |
+|------|------------------------|-------------------|--------|---------------------|
+| Granulometry | 24.1% (ZS) / 27.8% (FS) | 57.4% | 75.2% | **77.8%** |
+| Weld | 63.7% (ZS) / 62.1% (FS) | 73.3% | 73.3% | **75.0%** |
+
+Without answer-conditioning, wrong reasoning drops performance 17.8pp below Direct on granulometry. Answer-conditioning is essential when the teacher model is unreliable.
+
+## Method
+
+1. A frontier VLM (GPT-4.1) receives each training image **with the correct label**
+2. It generates a justified visual explanation of why the classification is correct
+3. A 3B model (Qwen2.5-VL-3B) is fine-tuned on these reasoning-augmented examples via LoRA
+4. The frontier model is not classifying — it already knows the answer. It explains what visual features justify it.
+
+Each image produces 4 training pairs: 3 CoT descriptions + 1 direct JSON label.
+
+## Datasets
+
+| Dataset | Source | Modality | Classes | Train | Test |
+|---------|--------|----------|---------|-------|------|
+| Granulometry | Coenen et al. 2022 | Photography | 9 | 18 | 108 |
+| NEU-CLS | Song & Yan 2013 | Photography | 6 | 30 | 360 |
+| UHCS | DeCost et al. 2019 | Microscopy | 5 | 30 | 120 |
+| RIAWELC | Totino et al. 2022 | X-ray | 4 | 24 | 240 |
+
+Three modalities: visible-light photography, optical/SEM microscopy, X-ray radiography.
+
+## Training Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Base model | Qwen2.5-VL-3B-Instruct (BF16) |
+| LoRA rank / alpha / dropout | 16 / 32 / 0.05 |
+| Target modules | q, k, v, o, gate, up, down proj |
+| Trainable parameters | 37.2M (0.98% of total) |
+| Learning rate | 2e-5 |
+| Epochs | 40 |
+| Effective batch size | 4 (gradient accumulation) |
+| Scheduler | Cosine with 10% warmup |
+| Training time | 19 min (Direct, granulometry) to 111 min (CoT-Aug, UHCS) on L4 |
 
 ## Project Structure
 
 ```
-├── task1-serverless-inference/   # Phi-4 serverless API testing (Done)
-├── task2-cloud-vm-inference/     # All 4 models on Azure ML GPU VMs (Done)
-├── task3-benchmarking/           # Base model benchmarking on test sets (Done)
-├── task4-fine-tuning/            # LoRA fine-tuning: standard + SEAL-inspired (Done)
-├── task5-quantization/           # INT4 quantization + edge sim (Planned)
-├── experiments/                  # Early Phi-4 local inference & object detection tests
-│   ├── phi4-local-inference/
-│   └── phi4-object-detection/
-├── datasets/                     # Training/test data (gitignored — too large)
-│   └── granulometry/             # 899 images (108 test + 791 train)
-└── docs/                         # Research & analysis documents
+├── task3-benchmarking/              # Base model + frontier model baselines
+├── task4-fine-tuning/               # LoRA training (Direct + CoT-Aug)
+│   ├── granulometry/
+│   ├── steel-surface/
+│   ├── uhcs-microstructure/
+│   └── riawelc-weld/
+├── experiments/
+│   ├── ablation-multi-seed/         # 32 training runs across 4 seeds
+│   ├── ablation-equal-budget/       # Direct-4× control experiment
+│   └── ablation-unconditioned-cot/  # Unconditioned CoT baseline
+├── datasets/                        # Image data (gitignored)
+├── papers/
+│   ├── arxiv/                       # arXiv preprint
+│   └── bmvc2026/                    # BMVC 2026 submission
+└── docs/                            # Documentation
 ```
 
-## Azure Resources
+## Hardware
 
-| Resource | Purpose | Cost |
-|----------|---------|------|
-| Subscription | Ether_POC_Subscription | ~$3,500 credits (expires ~May 1, 2026) |
-| Workspace | `slm-workspace` (West US) | — |
-| GPU VM (main) | `slm-workbench` — Standard_NC12s_v3 (2x V100, 32GB) | $6.12/hr |
-| GPU VM (edge sim) | `slm-edge-sim` — Standard_NC4as_T4_v3 (1x T4, 16GB) | $0.53/hr |
-| Serverless endpoint | `phi4-mm-serverless` (East US 2) | Pay-per-token |
+| Phase | Hardware | Cost |
+|-------|----------|------|
+| Training (Azure) | 2× NVIDIA V100 16GB | $6.12/hr |
+| Training (GCP) | 1× NVIDIA L4 24GB | $1.00/hr |
+| CoT generation | GPT-4.1 via Azure OpenAI | ~$20 total |
+| Unconditioned baseline | Gemini 2.5 Pro via Vertex AI | ~$5 total |
 
-### Compute Management
+## How to Reproduce
 
-```bash
-# Stop when not using (saves money)
-az ml compute stop --name slm-workbench --resource-group CashAPI --workspace-name slm-workspace
-az ml compute stop --name slm-edge-sim --resource-group CashAPI --workspace-name slm-workspace
+1. Place datasets in `datasets/` (see each task folder for expected structure)
+2. Run CoT generation notebooks in `task4-fine-tuning/<task>/` to create training JSONL
+3. Run training notebooks to produce LoRA adapters
+4. Run evaluation cells to get accuracy on test sets
+5. For multi-seed ablation: `python experiments/ablation-multi-seed/ablation_multi_seed.py`
 
-# Start when needed
-az ml compute start --name slm-workbench --resource-group CashAPI --workspace-name slm-workspace
-```
+## Citation
 
-## GCP Resources (Active — migrated May 2026)
+Paper under review. Preprint forthcoming on arXiv.
 
-Azure credits expired. Project migrated to GCP using Google for Startups credits ($25,000, expires May 2028).
+## Author
 
-| Resource | Purpose | Cost |
-|----------|---------|------|
-| Project | `project-162f6734-044f-424a-9ad` | — |
-| Billing | GFS Cloud Program ($25,000) + Free Trial (₹28,283) | — |
-| GPU VM | `slm-workbench-l4` — g2-standard-12 (1× L4 24GB, 12 vCPU, 48GB RAM) | ~$1.00/hr |
-| Boot disk | 200 GB PD-SSD | ~$34/mo |
-| Data disk | 100 GB PD-SSD (workspace at `/home/jupyter/workspace/`) | ~$17/mo |
-| GCS bucket | `gs://slm-fine-tuning-transfer-4ffe5e` (30 GB zip backup) | ~$0.60/mo |
-| Region | asia-southeast1-b (Singapore) | — |
-| Auto-shutdown | 60 min idle (kernel activity keeps it alive during training) | — |
-
-### GCP Compute Management
-
-```bash
-# Stop when done (or let auto-shutdown handle it)
-gcloud workbench instances stop slm-workbench-l4 --location=asia-southeast1-b --project=project-162f6734-044f-424a-9ad
-
-# Start when ready to work
-gcloud workbench instances start slm-workbench-l4 --location=asia-southeast1-b --project=project-162f6734-044f-424a-9ad
-
-# Access JupyterLab
-# URL: https://43ffe1bf25bda0df-dot-asia-southeast1.notebooks.googleusercontent.com
-# Or via GCP Console → Vertex AI → Workbench → slm-workbench-l4 → Open JupyterLab
-```
-
-### GCP Cost Summary
-
-| State | Cost |
-|-------|------|
-| VM running (training/evaluating) | ~$1.00/hr |
-| VM stopped (idle) | ~$1.70/day (disk storage only) |
-| Monthly (est. 20h usage + idle) | ~$71/mo |
-
-### Key Differences from Azure Setup
-
-| | Azure (old) | GCP (current) |
-|---|---|---|
-| GPU | 2× V100 16GB (32GB total) | 1× L4 24GB |
-| Training speed | ~90 min/run | ~2.5–3 hr/run |
-| Cost/hr | $6.12–8.00 | $1.00 |
-| Idle cost | $6.12/hr (forgot to stop) | $0 (auto-shutdown) |
-| Model loading | `max_memory={0:'6GiB', 1:'15GiB'}` | `device_map='auto'` (single GPU) |
-| Python env | System Python | `/opt/micromamba/envs/jupyterlab/` |
-| Package install | `pip install` | `sudo /opt/micromamba/envs/jupyterlab/bin/pip install` |
-
-## Task Progress
-
-| Task | Status | Details |
-|------|--------|---------|
-| Task 1: Serverless Inference | Done | Phi-4 deployed, tested via API |
-| Task 2: Cloud VM Inference | Done | All 4 models compared on V100 |
-| Task 3: Benchmarking | Done | Base model baseline on granulometry test set |
-| Task 4: LoRA Fine-Tuning | Done | Direct LoRA (71.3%) + SEAL CoT distillation (79.6%) |
-| Task 5: Quantization + Edge | In Progress | INT4 quantization, test on T4 (edge sim) |
-| Task 6: Industrial Validation | Planned | 100+ image validation run |
-| Task 7: LoRA Swap Demo | Planned | Adapter hot-swap proof of concept |
-| Task 8: Final Comparison | Planned | Head-to-head scoring |
-
-## Key Findings So Far
-
-- Florence-2: Fastest (0.2–3s per image), reliable native detection
-- Qwen2.5-VL-3B: Best VLM balance — good quality, reasonable speed (3–12s), reliable structured output
-- Qwen2.5-VL-7B: Slower than 3B with worse results — not worth the extra size
-- Phi-4-multimodal: Slowest (12–210s), inconsistent structured output — not suitable for detection
-
-### Task 3 Baseline Results (Qwen2.5-VL-3B, granulometry)
-
-| Metric | Zero-Shot (1500px) | Few-Shot (1400px + ref) |
-|--------|-------------------|------------------------|
-| JSON validity | 100% | 100% |
-| Size accuracy | 36.1% | 36.1% |
-| Grading accuracy | 34.3% | 24.1% |
-| Both correct | 12.0% | 8.3% |
-| Avg inference time | 8.9s | 9.4s |
-
-### Frontier Model Results (same 108 test images)
-
-| Model | Mode | Size | Grading | Both | Time |
-|-------|------|------|---------|------|------|
-| GPT-5 | Zero-shot | 59.3% | 33.3% | 18.5% | 11.9s |
-| GPT-5 | Few-shot | 66.7% | 33.3% | 22.2% | 15.8s |
-| GPT-4.1 | Zero-shot (t=0.7) | 53.7% | 49.1% | 31.5% | 4.3s |
-| GPT-4.1 | Few-shot (t=0.7) | 62.0% | 59.3% | 29.6% | 4.7s |
-
-GPT-4.1 few-shot with temperature control is the best performer — the only model to break past random chance on grading (59.3% vs 33.3%). Selected as the SEAL teacher for Task 4.
-
-### Task 4 Fine-Tuning Results (Qwen2.5-VL-3B + LoRA, 18 training images)
-
-| Method | Size | Grading | Both | Time |
-|--------|------|---------|------|------|
-| LoRA Direct (Image→JSON) | 89.8% | 78.7% | 71.3% | 5.0s |
-| LoRA + CoT Distillation (Image→Description+JSON) | 91.7% | 86.1% | 79.6% | 3.8s |
-
-The SEAL-inspired approach (answer-conditioned chain-of-thought distillation from GPT-4.1) wins on every metric. A 3B model fine-tuned on just 18 images outperforms GPT-4.1 (29.6% both) by 50 percentage points. The frontier model's visual reasoning descriptions, generated with the correct answer, teach domain knowledge the small model can't discover alone.
-
-## Datasets
-
-Datasets are gitignored (too large for git). Transfer separately to the VM.
-
-### Granulometry
-- 108 test images + 791 train images (9 classes × 2 samples)
-- Ground truth: max particle size (8/16/32mm) and grading (coarse/medium/fine)
-- Manifests: `test_manifest.json`, `train_manifest.json`
-
-## Budget
-
-| Category | Est. Cost |
-|----------|-----------|
-| Tasks 1–8 total | ~$35–90 |
-| Existing infra burn (~3 weeks) | ~$80–100 |
-| Total estimated | ~$115–190 |
-| Remaining credits | ~$3,300+ |
-
----
-
-## Azure Subscription Cost Estimate
-
-Subscription: Ether_POC_Subscription (fe37b5f6-efa5-43a5-ba04-2d3684b07345)
-Date: April 8, 2026
-
-### Summary
-
-| Category | Est. Monthly Cost |
-|----------|-------------------|
-| VM (chaosai — running 24/7) | ~$70 |
-| Managed Disk (Premium SSD 40GB) | ~$10 |
-| Cosmos DB (Gremlin provisioned) | ~$24 |
-| Cosmos DB (2x Serverless) | ~$0–10 |
-| Public IPs (2x static) | ~$8 |
-| Storage Accounts (3x) | ~$2–9 |
-| Cognitive Services (S0, usage-based) | $0–100+ |
-| Everything else (Free/Consumption) | ~$0–5 |
-| **Total (idle/low usage)** | **~$115–135/mo** |
-| **Total (moderate AI/API usage)** | **~$150–250/mo** |
-
-### Cost Saving Recommendations
-
-1. Deallocate the `chaosai` VM when not in use — saves ~$70/mo
-2. Review `demoacccosmo123` (Gremlin/provisioned) — delete or switch to serverless to save ~$24/mo
-3. Monitor OpenAI/AI Services usage — S0 resources are pay-per-use
-4. Release unused Public IPs — ~$4/mo each
-
-### Detailed Resource Breakdown
-
-#### Virtual Machines
-| Resource | Size | Location | Est. Monthly Cost |
-|----------|------|----------|-------------------|
-| chaosai | Standard_D2s_v3 (2 vCPU, 8 GB RAM) | East US | ~$70/mo |
-
-#### Managed Disks
-| Resource | Size | SKU | Est. Monthly Cost |
-|----------|------|-----|-------------------|
-| chaosai_OsDisk | 40 GB | Premium_LRS (P6) | ~$10/mo |
-
-#### Cosmos DB
-| Resource | Kind | Mode | Location | Est. Monthly Cost |
-|----------|------|------|----------|-------------------|
-| sqlcosmossanta | NoSQL | Serverless | Central India | ~$0–5/mo |
-| cashapi-cosmosdb | NoSQL | Serverless | Central India | ~$0–5/mo |
-| demoacccosmo123 | Gremlin (Graph) | Provisioned | West US | ~$24+/mo |
-
-#### Cognitive Services / AI
-| Resource | Kind | SKU | Est. Monthly Cost |
-|----------|------|-----|-------------------|
-| demorao | Custom Vision Training | F0 (Free) | $0 |
-| demorao-Prediction | Custom Vision Prediction | F0 (Free) | $0 |
-| DocumentRecognizerOS | Form Recognizer | F0 (Free) | $0 |
-| ReadifyAI-mvp | AI Services | S0 | Pay-per-use |
-| ether-openai | OpenAI | S0 | Pay-per-use |
-| ether-project-resource | AI Services | S0 | Pay-per-use |
-
-#### App Service Plans
-All Free (F1) or Consumption/Dynamic (Y1) — effectively $0.
-
-#### Storage Accounts
-| Resource | SKU | Est. Monthly Cost |
-|----------|-----|-------------------|
-| lumostore5344 | Standard_RAGRS | ~$1–5/mo |
-| raokaworkspace5618175407 | Standard_LRS | ~$0.50–2/mo |
-| cashapifunctions | Standard_LRS | ~$0.50–2/mo |
-
-> Pricing sourced from [Azure Pricing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/) and [Holori Azure VM pricing](https://calculator.holori.com/azure/vm/standard-d2s-v3). Content was rephrased for compliance with licensing restrictions.
-
----
-
-## SLM Capabilities & Approach
-
-### Recommended Models: Microsoft Phi-4 Family
-
-| Model | Parameters | Context | Strengths |
-|-------|-----------|---------|-----------|
-| Phi-4-mini | ~3.8B | 128K | Cheapest, great for edge/local, strong reasoning |
-| Phi-4 | ~14B | 128K | Best quality SLM, rivals Llama 70B on reasoning |
-| Phi-3.5-MoE | ~42B (MoE) | 128K | Mixture-of-experts, high quality, efficient |
-| Phi-4-multimodal | ~5.6B | 128K | Text + image + audio |
-
-### Cloud Inference Options
-
-**Serverless API (Recommended):** Deploy via Azure AI Foundry, pay-per-token, no idle costs.
-- Phi-4-mini: $0.000075/1K input, $0.0003/1K output
-- Phi-4: $0.000125/1K input, $0.0005/1K output
-
-**Managed Compute:** GPU VM, pay while running. Cheapest: NC4as_T4_v3 at ~$0.53/hr.
-
-### Local Inference Options
-- Ollama: `ollama run phi4-mini`
-- llama.cpp: GGUF quantized models
-- ONNX Runtime: Microsoft's runtime, optimized for Phi (DirectML for Windows GPU)
-
-### Quantization
-
-| Precision | Model Size (3.8B) | VRAM Needed | Quality Loss |
-|-----------|-------------------|-------------|--------------|
-| FP16 | ~7.6 GB | ~8 GB | None |
-| INT8 | ~3.8 GB | ~4 GB | Minimal |
-| INT4 (Q4_K_M) | ~2.2 GB | ~2.5 GB | ~1–2% |
-
-### Fine-Tuning Options
-
-**Serverless (Azure AI Foundry):** $0.003/1K tokens training, ~$50 per run.
-**Managed Compute (QLoRA):** NC4as_T4_v3 at $0.53/hr, ~$1–2 per run.
-**Local:** Free, needs 8GB+ VRAM GPU.
-
-### Benchmark Targets
-
-| Model | Params | MMLU | HumanEval | GSM8K |
-|-------|--------|------|-----------|-------|
-| Phi-4-mini | 3.8B | ~70 | ~65 | ~80 |
-| Phi-4 | 14B | ~80 | ~75 | ~89 |
-| Llama-3.1-8B | 8B | ~66 | ~62 | ~77 |
-| Gemma-2-9B | 9B | ~71 | ~54 | ~76 |
-
-> Sources: [Azure AI Foundry Model Catalog](https://ai.azure.com/catalog), [Phi Pricing](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/announcing-new-phi-pricing-empowering-your-business-with-small-language-models/4395112), [Azure VM Pricing](https://instances.vantage.sh/azure). Content was rephrased for compliance with licensing restrictions.
+Shubham Rao — [Entropy AI Research Labs](https://entropyresearch.ai)

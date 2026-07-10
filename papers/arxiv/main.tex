@@ -149,13 +149,13 @@ We evaluate on four tasks spanning three image modalities (Table~\ref{tab:datase
 \toprule
 Dataset & Modality & Classes & Train & Test \\
 \midrule
-Granulometry~\cite{coenen2022learning} & Macro photo & 9 & 18 & 108 \\
-NEU-CLS~\cite{song2013noise} & Grayscale & 6 & 30 & 360 \\
+Granulometry~\cite{coenen2022learning} & Photography & 9 & 18 & 108 \\
+NEU-CLS~\cite{song2013noise} & Photography & 6 & 30 & 360 \\
 UHCS~\cite{decost2019high} & Microscopy & 5 & 30 & 120 \\
 RIAWELC~\cite{totino2022riawelc} & X-ray & 4 & 24 & 240 \\
 \bottomrule
 \end{tabular}
-\caption{Dataset summary.}
+\caption{Dataset summary. Three modalities: visible-light photography (macro and surface), optical/SEM microscopy, and X-ray radiography.}
 \label{tab:datasets}
 \end{table}
 
@@ -338,7 +338,7 @@ Weld & 63.7 & 62.1 & 73.3 & 73.3 & \textbf{75.0} \\
 The pattern is clear:
 \begin{itemize}
 \item \textbf{Teacher accuracy 24\% (granulometry):} Unconditioned CoT drops 17.8pp below Direct. Wrong reasoning poisons the model.
-\item \textbf{Teacher accuracy 64\% (weld):} Unconditioned CoT matches Direct exactly. Correct and incorrect reasoning cancel out.
+\item \textbf{Teacher accuracy 63.7\% (weld):} Unconditioned CoT matches Direct exactly. Correct and incorrect reasoning cancel out.
 \item \textbf{Teacher accuracy 100\% (conditioned):} CoT improves over Direct by +1.7 to +4.4pp.
 \end{itemize}
 
@@ -381,7 +381,7 @@ The weld Direct model reaching near-zero loss by epoch 25 indicates complete mem
 \end{itemize}
 CoT descriptions explicitly teach these distinctions (``circular spots, NOT jagged lines'') which is information that JSON-only training cannot convey.
 
-\textbf{The role of answer-conditioning.} Our unconditioned experiment reveals a linear relationship: performance tracks teacher accuracy. At 24\% teacher accuracy, unconditioned CoT is catastrophic. At 64\%, neutral. At 100\% (conditioned), positive. This makes answer-conditioning essential for any domain where frontier models lack expertise, which is precisely the setting where the method is most needed.
+\textbf{The role of answer-conditioning.} Our unconditioned experiment reveals a clear relationship: performance tracks teacher accuracy. At 24\% teacher accuracy, unconditioned CoT is catastrophic. At 63.7\%, neutral. At 100\% (conditioned), positive. This makes answer-conditioning essential for any domain where frontier models lack expertise, which is precisely the setting where the method is most needed.
 
 \textbf{Prompt design matters more than expected.} The 18.1pp drop from using weaker class definitions (same images, same hyperparameters) suggests that prompt engineering is not auxiliary to the method. It is the method. The class definitions are what the frontier model uses to generate structured reasoning. Weak definitions produce weak reasoning.
 

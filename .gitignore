@@ -26,3 +26,6 @@ Thumbs.db
 
 # Output artifacts
 output/
+
+# Endorsement requests (private contact info)
+papers/endorsement-requests/
